@@ -1,0 +1,220 @@
+function Sites() {
+  const sites = [
+    
+    {
+      name: "AuroraGlasses",
+      category: "Website",
+      description:
+        "Experiência digital desenvolvida para apresentar a marca, seus produtos e sua identidade visual.",
+      technology: "HTML • CSS • JavaScript",
+      image: "/auroraglasses.png",
+      link: "https://www.auroraglasses.com.br",
+    },
+
+    {
+      name: "Florêa",
+      category: "Landing Page • Floricultura",
+      description:
+        "Landing page moderna desenvolvida para uma floricultura, com foco em apresentação de produtos, ocasiões especiais e experiência visual.",
+      technology: "React • TypeScript • CSS",
+      image: "/florea.png",
+      link: "/floricultura",
+    },
+
+    {
+      name: "NOVA Arquitetura",
+      category: "Landing Page • Arquitetura",
+      description:
+        "Landing page contemporânea para escritório de arquitetura, com portfólio, serviços, processo e apresentação do escritório.",
+      technology: "React • TypeScript • CSS",
+      image: "/arquitetura.png",
+      link: "/arquitetura",
+    },
+
+{
+  name: "Pizzaria",
+  category: "Landing Page • Gastronomia",
+  description:
+    "Landing page moderna para pizzaria artesanal, com cardápio, sabores, processo de produção, avaliações e chamada para pedidos.",
+  technology: "React • TypeScript • CSS",
+  image: "/forno27.png",
+  link: "/pizzaria",
+},
+
+  {
+  name: "Petshop",
+  category: "Landing Page • Petshop",
+  description:
+    "Página desenvolvida para apresentar serviços, produtos e informações de um petshop de forma moderna e amigável.",
+  technology: "React • TypeScript • CSS",
+  image: "/petz.png",
+  link: "/petshop",
+},
+
+    {
+  name: "Nexus Fitness",
+  category: "Landing Page • Academia",
+  description:
+    "Landing page futurista desenvolvida para academia, com foco em performance, planos, estrutura e experiência digital.",
+  technology: "React • TypeScript • CSS",
+  image: "/nexus.png",
+  link: "/academia",
+},
+
+    {
+  name: "Aurora 925",
+  category: "E-commerce • Pratas 925",
+  description:
+    "Loja virtual sofisticada para joias em prata 925, com catálogo de produtos, categorias, cuidados e experiência de compra.",
+  technology: "React • TypeScript • CSS",
+  image: "/aurora925.png",
+  link: "/pratas",
+},
+  ];
+
+  return (
+    <section
+      className="sites-section"
+      id="sites"
+    >
+
+      {/* =================================
+          TÍTULO
+      ================================= */}
+
+      <div className="section-title">
+
+        <span>
+          ✦ SITES DESENVOLVIDOS
+        </span>
+
+        <h2>
+          Experiências digitais
+          <strong> para a Web.</strong>
+        </h2>
+
+        <p>
+          Conheça alguns dos sites e landing pages
+          desenvolvidos pela FlowUx.
+        </p>
+
+      </div>
+
+
+      {/* =================================
+          GRID
+      ================================= */}
+
+      <div className="sites-grid">
+
+        {sites.map((site) => (
+
+          <article
+            className="site-card"
+            key={site.name}
+          >
+
+            {/* =================================
+                IMAGEM
+            ================================= */}
+
+            <div className="site-image">
+
+              <img
+                src={site.image}
+                alt={`Preview do site ${site.name}`}
+              />
+
+            </div>
+
+
+            {/* =================================
+                CONTEÚDO
+            ================================= */}
+
+            <div className="site-content">
+
+              <span className="site-category">
+                {site.category}
+              </span>
+
+              <h3>
+                {site.name}
+              </h3>
+
+              <p>
+                {site.description}
+              </p>
+
+
+              {/* =================================
+                  TECNOLOGIAS
+              ================================= */}
+
+              <div className="site-tech">
+
+                {site.technology
+                  .split(" • ")
+                  .map((tech) => (
+
+                    <span key={tech}>
+                      {tech}
+                    </span>
+
+                  ))}
+
+              </div>
+
+
+              {/* =================================
+                  BOTÃO
+              ================================= */}
+
+              {site.link !== "#" ? (
+
+                <a
+                  href={site.link}
+                  target={
+                    site.link.startsWith("http")
+                      ? "_blank"
+                      : undefined
+                  }
+                  rel={
+                    site.link.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="site-button"
+                >
+
+                  {site.link.startsWith("http")
+                    ? "Visitar site →"
+                    : "Conhecer projeto →"}
+
+                </a>
+
+              ) : (
+
+                <button
+                  className="site-button"
+                  type="button"
+                  disabled
+                >
+                  Projeto em desenvolvimento
+                </button>
+
+              )}
+
+            </div>
+
+          </article>
+
+        ))}
+
+      </div>
+
+    </section>
+  );
+}
+
+export default Sites;

@@ -1,0 +1,2018 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  --aurora-ink: #24231f;
+  --aurora-muted: #77736b;
+  --aurora-cream: #f7f4ee;
+  --aurora-paper: #fffdf8;
+  --aurora-line: rgba(36, 35, 31, .14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.pratas-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--aurora-cream);
+  color: var(--aurora-ink);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+  isolation: isolate;
+}
+
+.pratas-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pratas-page button {
+  color: inherit;
+}
+
+.pratas-page img {
+  display: block;
+}
+
+.pratas-topline {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 5.8%;
+  background: var(--aurora-ink);
+  color: #f7f4ee;
+  font-size: 9px;
+  letter-spacing: .18em;
+}
+
+.pratas-topline span:first-child {
+  color: #d8d2b7;
+  margin-right: auto;
+}
+
+.pratas-header {
+  min-height: 86px;
+  padding: 0 5.8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: var(--aurora-paper);
+  border-bottom: 1px solid var(--aurora-line);
+  position: relative;
+  z-index: 10;
+}
+
+.pratas-logo {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 145px;
+}
+
+.pratas-logo>span {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  letter-spacing: .15em;
+  line-height: 1;
+}
+
+.pratas-logo i {
+  color: #a9a38d;
+  font-size: 13px;
+  font-style: normal;
+  margin-left: 3px;
+  vertical-align: top;
+}
+
+.pratas-logo small {
+  font-size: 8px;
+  letter-spacing: .36em;
+}
+
+.pratas-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 3vw, 44px);
+}
+
+.pratas-nav a,
+.pratas-footer-links a {
+  font-size: 11px;
+  color: #59564f;
+  transition: color .2s ease;
+}
+
+.pratas-nav a:hover,
+.pratas-footer-links a:hover {
+  color: #9c9578;
+}
+
+.pratas-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pratas-icon-button,
+.pratas-bag-button {
+  border: 1px solid var(--aurora-line);
+  background: transparent;
+  cursor: pointer;
+}
+
+.pratas-icon-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 25px;
+  display: grid;
+  place-items: center;
+}
+
+.pratas-bag-button {
+  padding: 12px 16px;
+  border-radius: 30px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pratas-bag-button span {
+  background: var(--aurora-ink);
+  color: white;
+  min-width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+}
+
+.pratas-hero {
+  min-height: 650px;
+  padding: 78px 8.5% 68px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 4%;
+  position: relative;
+  background: radial-gradient(ellipse at 82% 45%, #e7e1d5 0%, #f2eee6 35%, #f7f4ee 72%);
+  isolation: isolate;
+}
+
+.pratas-hero-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .13;
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+}
+
+.pratas-hero-content {
+  min-width: 0;
+  max-width: 540px;
+  position: relative;
+  z-index: 2;
+  animation: aurora-rise .9s both;
+}
+
+.pratas-eyebrow {
+  margin: 0 0 22px;
+  font-size: 9px;
+  letter-spacing: .2em;
+  font-weight: 600;
+  color: #777263;
+}
+
+.pratas-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #a49d7d;
+  box-shadow: 0 0 0 4px #e8e3d7;
+}
+
+.pratas-hero h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(52px, 6.5vw, 94px);
+  font-weight: 400;
+  letter-spacing: -.065em;
+  line-height: .99;
+}
+
+.pratas-hero h1 em,
+.pratas-section-heading h2 em,
+.pratas-manifesto-content h2 em,
+.pratas-care-intro h2 em,
+.pratas-cta-section h2 em {
+  color: #8b8671;
+  font-weight: 400;
+}
+
+.pratas-hero-description {
+  max-width: 410px;
+  color: #77736b;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 26px 0 30px;
+}
+
+.pratas-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.pratas-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 16px 20px;
+  font-size: 11px;
+  transition: transform .25s ease, background .25s ease;
+}
+
+.pratas-button:hover {
+  transform: translateY(-3px);
+}
+
+.pratas-button-dark {
+  background: var(--aurora-ink);
+  color: white !important;
+}
+
+.pratas-button-dark:hover {
+  background: #49463d;
+}
+
+.pratas-button span {
+  font-size: 16px;
+}
+
+.pratas-text-link {
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pratas-text-link span {
+  font-size: 17px;
+  transition: transform .2s ease;
+}
+
+.pratas-text-link:hover span {
+  transform: translateX(4px);
+}
+
+.pratas-hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 55px;
+  padding-top: 22px;
+  border-top: 1px solid var(--aurora-line);
+}
+
+.pratas-hero-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pratas-hero-details strong {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.pratas-hero-details span {
+  color: var(--aurora-muted);
+  font-size: 9px;
+}
+
+.pratas-hero-visual {
+  min-width: 0;
+  min-height: 480px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: aurora-rise 1.1s .12s both;
+}
+
+.pratas-hero-image {
+  width: min(100%, 435px);
+  height: 490px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border-radius: 48% 48% 4px 4px;
+  box-shadow: 0 28px 80px rgba(71, 63, 45, .13);
+}
+
+.pratas-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(31, 29, 25, .3));
+  pointer-events: none;
+}
+
+.pratas-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: aurora-image-reveal 1.3s both;
+}
+
+.pratas-orbit {
+  position: absolute;
+  border: 1px solid rgba(145, 137, 110, .32);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+
+.pratas-orbit-one {
+  width: min(510px, 110%);
+}
+
+.pratas-orbit-two {
+  width: min(565px, 122%);
+  border-style: dashed;
+  opacity: .6;
+  animation: aurora-orbit 50s linear infinite;
+}
+
+.pratas-floating-note {
+  position: absolute;
+  z-index: 2;
+  top: 14%;
+  right: -4%;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: #ded8c7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(9deg);
+  box-shadow: 0 12px 35px #7a725526;
+  animation: aurora-float 5s ease-in-out infinite;
+}
+
+.pratas-floating-note span {
+  font-size: 7px;
+  letter-spacing: .2em;
+}
+
+.pratas-floating-note strong {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.pratas-floating-note i {
+  font-style: normal;
+  margin-top: 7px;
+  color: #8b846a;
+}
+
+.pratas-hero-caption {
+  position: absolute;
+  z-index: 2;
+  left: 3%;
+  bottom: 4%;
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: white;
+  font-size: 8px;
+  letter-spacing: .18em;
+}
+
+.pratas-scroll-cue {
+  position: absolute;
+  bottom: 25px;
+  left: 5.8%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #77736b !important;
+  font-size: 8px;
+  letter-spacing: .18em;
+}
+
+.pratas-scroll-cue span {
+  height: 25px;
+  width: 1px;
+  background: #9b957e;
+  animation: aurora-scroll 1.7s ease-in-out infinite;
+  transform-origin: top;
+}
+
+.pratas-marquee {
+  overflow: hidden;
+  background: var(--aurora-ink);
+  color: #f7f4ee;
+  padding: 17px 0;
+}
+
+.pratas-marquee-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  animation: aurora-marquee 35s linear infinite;
+}
+
+.pratas-marquee-track span {
+  font-size: 9px;
+  letter-spacing: .22em;
+  white-space: nowrap;
+}
+
+.pratas-marquee-track b {
+  color: #c4bda3;
+  font-size: 13px;
+}
+
+.pratas-collection-section,
+.pratas-categories-section,
+.pratas-care-section {
+  padding: 110px 8.5%;
+}
+
+.pratas-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 42px;
+}
+
+.pratas-section-heading .pratas-eyebrow {
+  margin-bottom: 14px;
+}
+
+.pratas-section-heading h2,
+.pratas-manifesto-content h2,
+.pratas-care-intro h2,
+.pratas-cta-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 4.3vw, 57px);
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.pratas-section-heading>p {
+  max-width: 330px;
+  margin: 0 0 5px;
+  color: var(--aurora-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.pratas-search-panel {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+  border: 1px solid var(--aurora-line);
+  background: #fffdf8;
+  animation: aurora-rise .25s both;
+}
+
+.pratas-search-panel label {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+.pratas-search-panel input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid var(--aurora-line);
+  padding: 10px 3px;
+  font-size: 12px;
+}
+
+.pratas-search-panel button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.pratas-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--aurora-line);
+  padding-bottom: 15px;
+  margin-bottom: 18px;
+}
+
+.pratas-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pratas-filter-list button {
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  background: transparent;
+  color: var(--aurora-muted);
+  font-size: 10px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.pratas-filter-list button:hover,
+.pratas-filter-list button.active {
+  border-color: var(--aurora-line);
+  background: var(--aurora-paper);
+  color: var(--aurora-ink);
+}
+
+.pratas-sort {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--aurora-muted);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.pratas-sort select {
+  max-width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--aurora-ink);
+  font-size: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.pratas-results-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 24px;
+  color: var(--aurora-muted);
+  font-size: 9px;
+  letter-spacing: .04em;
+}
+
+.pratas-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 38px 20px;
+}
+
+.pratas-product-card {
+  min-width: 0;
+  animation: aurora-rise .5s both;
+}
+
+.pratas-product-image {
+  position: relative;
+  height: clamp(230px, 30vw, 390px);
+  background: #ece8df;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pratas-product-image>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.pratas-product-card:hover .pratas-product-image>img {
+  transform: scale(1.055);
+}
+
+.pratas-product-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 8px 10px;
+  background: rgba(255, 253, 248, .9);
+  font-size: 7px;
+  letter-spacing: .14em;
+}
+
+.pratas-favorite-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 253, 248, .92);
+  cursor: pointer;
+  font-size: 21px;
+  transition: transform .2s ease, color .2s ease;
+}
+
+.pratas-favorite-button:hover {
+  transform: scale(1.1);
+}
+
+.pratas-favorite-button.is-favorite {
+  color: #9d5d58;
+}
+
+.pratas-quick-view {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 15px;
+  border: 0;
+  background: rgba(255, 253, 248, .94);
+  opacity: 0;
+  transform: translateY(8px);
+  cursor: pointer;
+  font-size: 10px;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.pratas-product-card:hover .pratas-quick-view,
+.pratas-product-card:focus-within .pratas-quick-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pratas-product-info {
+  padding: 17px 1px 0;
+}
+
+.pratas-product-category {
+  color: #898473;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.pratas-product-info h3 {
+  margin: 8px 0 15px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 19px;
+  overflow-wrap: anywhere;
+}
+
+.pratas-product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pratas-product-bottom strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pratas-product-bottom button {
+  border: 0;
+  border-bottom: 1px solid #a8a18b;
+  background: transparent;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 10px;
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.pratas-product-bottom button span {
+  font-size: 15px;
+  transition: transform .2s ease;
+}
+
+.pratas-product-bottom button:hover span {
+  transform: rotate(90deg);
+}
+
+.pratas-empty-state {
+  padding: 70px 20px;
+  text-align: center;
+  border: 1px solid var(--aurora-line);
+}
+
+.pratas-empty-state>span {
+  font-size: 26px;
+  color: #a49d7d;
+}
+
+.pratas-empty-state h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.pratas-empty-state p {
+  color: var(--aurora-muted);
+  font-size: 12px;
+}
+
+.pratas-empty-state button {
+  margin-top: 12px;
+  border: 0;
+  background: var(--aurora-ink);
+  color: white !important;
+  padding: 13px 18px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.pratas-categories-section {
+  background: #eeebe3;
+}
+
+.pratas-section-heading-compact {
+  align-items: end;
+}
+
+.pratas-section-heading-compact h2 {
+  max-width: 600px;
+}
+
+.pratas-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pratas-category-card {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  color: white !important;
+  background: #8c8778;
+  cursor: pointer;
+}
+
+.pratas-category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s ease;
+}
+
+.pratas-category-card:hover img {
+  transform: scale(1.07);
+}
+
+.pratas-category-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 19, 17, .05), rgba(20, 19, 17, .76));
+}
+
+.pratas-category-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 9px;
+  letter-spacing: .15em;
+}
+
+.pratas-category-content {
+  position: absolute;
+  bottom: 22px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.pratas-category-content strong {
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.pratas-category-content small {
+  font-size: 10px;
+  line-height: 1.6;
+  opacity: .85;
+}
+
+.pratas-category-content b {
+  margin-top: 7px;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .08em;
+}
+
+.pratas-manifesto-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10%;
+  align-items: center;
+  padding: 120px 12%;
+}
+
+.pratas-manifesto-image {
+  min-width: 0;
+  height: 490px;
+  position: relative;
+}
+
+.pratas-manifesto-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pratas-manifesto-stamp {
+  position: absolute;
+  right: -24px;
+  bottom: 28px;
+  width: 82px;
+  height: 82px;
+  border: 1px solid #b3ad99;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: var(--aurora-cream);
+  font-family: "Playfair Display", serif;
+  line-height: 1.1;
+}
+
+.pratas-manifesto-content {
+  min-width: 0;
+}
+
+.pratas-manifesto-content h2 {
+  margin-bottom: 25px;
+}
+
+.pratas-manifesto-content>p:not(.pratas-eyebrow) {
+  color: var(--aurora-muted);
+  font-size: 12px;
+  line-height: 2;
+}
+
+.pratas-manifesto-signature {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 3px;
+}
+
+.pratas-manifesto-signature span {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  letter-spacing: .15em;
+}
+
+.pratas-manifesto-signature small {
+  font-size: 8px;
+  letter-spacing: .3em;
+}
+
+.pratas-benefits-section {
+  padding: 34px 8.5%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+  border-top: 1px solid var(--aurora-line);
+  border-bottom: 1px solid var(--aurora-line);
+}
+
+.pratas-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.pratas-benefit>span {
+  font-family: "Playfair Display", serif;
+  color: #969078;
+  font-size: 24px;
+}
+
+.pratas-benefit strong {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.pratas-benefit p {
+  margin: 7px 0 0;
+  color: var(--aurora-muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.pratas-care-section {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 12%;
+}
+
+.pratas-care-intro h2 {
+  margin-bottom: 18px;
+}
+
+.pratas-care-intro>p:last-child {
+  max-width: 300px;
+  color: var(--aurora-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.pratas-care-list {
+  min-width: 0;
+}
+
+.pratas-care-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--aurora-line);
+}
+
+.pratas-care-item:first-child {
+  padding-top: 0;
+}
+
+.pratas-care-item>span {
+  color: #9b957e;
+  font-size: 10px;
+  padding-top: 3px;
+}
+
+.pratas-care-item h3 {
+  margin: 0 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.pratas-care-item p {
+  margin: 0;
+  color: var(--aurora-muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.pratas-testimonial-section {
+  text-align: center;
+  padding: 90px 20px 100px;
+  background: #e9e5dc;
+}
+
+.pratas-quote-mark {
+  font-family: "Playfair Display", serif;
+  color: #9c957a;
+  font-size: 65px;
+  line-height: .7;
+}
+
+.pratas-testimonial-section blockquote {
+  margin: 24px auto 22px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(27px, 3.5vw, 43px);
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.pratas-testimonial-section blockquote em {
+  color: #8b8671;
+}
+
+.pratas-testimonial-section>p {
+  font-size: 8px;
+  letter-spacing: .22em;
+}
+
+.pratas-cta-section {
+  padding: 85px 8.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  background: #d8d3c5;
+}
+
+.pratas-cta-section .pratas-eyebrow {
+  margin-bottom: 15px;
+}
+
+.pratas-cta-section h2 {
+  font-size: clamp(36px, 4.5vw, 58px);
+}
+
+.pratas-cta-section>div>p:last-child {
+  margin: 18px 0 0;
+  color: #68645a;
+  font-size: 12px;
+}
+
+.pratas-footer {
+  padding: 42px 8.5% 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 28px;
+  background: var(--aurora-paper);
+}
+
+.pratas-footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.pratas-footer-links a {
+  font-size: 10px;
+}
+
+.pratas-footer-social {
+  text-align: right;
+  font-size: 11px;
+}
+
+.pratas-footer-copy {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--aurora-line);
+  padding-top: 18px;
+  margin: 10px 0 0;
+  color: var(--aurora-muted);
+  font-size: 9px;
+  text-align: center;
+}
+
+.pratas-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(24, 23, 20, .48);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: flex-end;
+  animation: aurora-fade .2s both;
+}
+
+.pratas-cart-drawer {
+  width: min(470px, 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--aurora-paper);
+  padding: 30px;
+  animation: aurora-drawer .35s cubic-bezier(.2, .7, .2, 1) both;
+  overflow: hidden;
+}
+
+.pratas-drawer-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--aurora-line);
+  padding-bottom: 22px;
+  gap: 16px;
+}
+
+.pratas-drawer-heading .pratas-eyebrow {
+  margin-bottom: 9px;
+}
+
+.pratas-drawer-heading h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.pratas-drawer-heading h2 span {
+  color: var(--aurora-muted);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+}
+
+.pratas-drawer-heading>button,
+.pratas-quick-close {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--aurora-line);
+  border-radius: 50%;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.pratas-cart-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pratas-cart-empty>span {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  color: #a49d7d;
+}
+
+.pratas-cart-empty h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 16px 0 6px;
+}
+
+.pratas-cart-empty p {
+  color: var(--aurora-muted);
+  font-size: 12px;
+}
+
+.pratas-cart-empty button {
+  margin-top: 15px;
+  padding: 14px 18px;
+  background: var(--aurora-ink);
+  color: white !important;
+  border: 0;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.pratas-cart-items {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 10px 0;
+}
+
+.pratas-cart-item {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) 25px;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--aurora-line);
+  align-items: start;
+}
+
+.pratas-cart-item>img {
+  width: 82px;
+  height: 100px;
+  object-fit: cover;
+  background: #ece8df;
+}
+
+.pratas-cart-item-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.pratas-cart-item-info>span {
+  color: var(--aurora-muted);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.pratas-cart-item-info>strong {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.pratas-cart-item-info>b {
+  font-size: 11px;
+}
+
+.pratas-quantity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+  border: 1px solid var(--aurora-line);
+  padding: 4px 8px;
+}
+
+.pratas-quantity button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pratas-quantity span {
+  font-size: 11px;
+}
+
+.pratas-remove-item {
+  border: 0;
+  background: transparent;
+  color: var(--aurora-muted) !important;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.pratas-cart-footer {
+  border-top: 1px solid var(--aurora-line);
+  padding-top: 22px;
+}
+
+.pratas-cart-footer>div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.pratas-cart-footer>div span {
+  color: var(--aurora-muted);
+  font-size: 11px;
+}
+
+.pratas-cart-footer>div strong {
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.pratas-cart-footer p {
+  color: var(--aurora-muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.pratas-cart-footer>button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  border: 0;
+  background: var(--aurora-ink);
+  color: white !important;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.pratas-quick-backdrop {
+  justify-content: center;
+  align-items: center;
+  padding: 22px;
+}
+
+.pratas-quick-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: min(780px, 100%);
+  max-height: min(620px, 90vh);
+  overflow: auto;
+  background: var(--aurora-paper);
+  animation: aurora-rise .3s both;
+}
+
+.pratas-quick-modal>img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  background: #ece8df;
+}
+
+.pratas-quick-info {
+  align-self: center;
+  min-width: 0;
+  padding: 38px;
+}
+
+.pratas-quick-info .pratas-eyebrow {
+  margin-bottom: 13px;
+}
+
+.pratas-quick-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.pratas-quick-info>strong {
+  font-size: 14px;
+}
+
+.pratas-quick-info>p:not(.pratas-eyebrow) {
+  margin: 20px 0 25px;
+  color: var(--aurora-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.pratas-quick-info>button:not(.pratas-quick-fav) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border: 0;
+  background: var(--aurora-ink);
+  color: white !important;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.pratas-quick-fav {
+  width: 100%;
+  margin-top: 12px;
+  border: 1px solid var(--aurora-line);
+  padding: 13px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.pratas-quick-close {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 2;
+  background: var(--aurora-paper);
+}
+
+.pratas-toast {
+  position: fixed;
+  z-index: 1200;
+  right: 25px;
+  bottom: 25px;
+  max-width: calc(100% - 40px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--aurora-ink);
+  color: white;
+  box-shadow: 0 12px 35px #0002;
+  font-size: 11px;
+  animation: aurora-toast .3s both;
+}
+
+.pratas-toast span {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #b9b39a;
+  color: var(--aurora-ink);
+}
+
+@keyframes aurora-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aurora-image-reveal {
+  from {
+    opacity: .4;
+    transform: scale(1.06);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes aurora-float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(9deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+}
+
+@keyframes aurora-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes aurora-scroll {
+
+  0%,
+  100% {
+    transform: scaleY(.5);
+    opacity: .45;
+  }
+
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes aurora-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes aurora-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aurora-drawer {
+  from {
+    transform: translateX(30px);
+    opacity: .6;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aurora-toast {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .pratas-header {
+    padding: 0 4%;
+  }
+
+  .pratas-nav {
+    gap: 16px;
+  }
+
+  .pratas-hero {
+    padding-left: 6%;
+    padding-right: 6%;
+    gap: 2%;
+  }
+
+  .pratas-hero-image {
+    height: 420px;
+  }
+
+  .pratas-hero-visual {
+    min-height: 430px;
+  }
+
+  .pratas-floating-note {
+    right: -2%;
+    width: 105px;
+    height: 105px;
+  }
+
+  .pratas-collection-section,
+  .pratas-categories-section,
+  .pratas-care-section {
+    padding: 85px 6%;
+  }
+
+  .pratas-manifesto-section {
+    padding: 90px 7%;
+    gap: 7%;
+  }
+
+  .pratas-categories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pratas-category-card {
+    height: 320px;
+  }
+
+  .pratas-benefits-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .pratas-topline {
+    padding: 8px 5%;
+    font-size: 7px;
+    letter-spacing: .1em;
+    gap: 8px;
+  }
+
+  .pratas-topline span:last-child {
+    text-align: right;
+  }
+
+  .pratas-header {
+    min-height: 72px;
+    gap: 10px;
+  }
+
+  .pratas-logo {
+    min-width: 0;
+  }
+
+  .pratas-logo>span {
+    font-size: 20px;
+  }
+
+  .pratas-logo small {
+    font-size: 7px;
+  }
+
+  .pratas-nav {
+    display: none;
+  }
+
+  .pratas-header-actions {
+    margin-left: auto;
+  }
+
+  .pratas-icon-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .pratas-bag-button {
+    padding: 9px 11px;
+    gap: 7px;
+  }
+
+  .pratas-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 55px 6% 60px;
+    gap: 35px;
+  }
+
+  .pratas-hero h1 {
+    font-size: clamp(54px, 14vw, 78px);
+  }
+
+  .pratas-hero-description {
+    font-size: 12px;
+    margin: 20px 0 25px;
+  }
+
+  .pratas-hero-details {
+    margin-top: 35px;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .pratas-hero-details strong {
+    font-size: 22px;
+  }
+
+  .pratas-hero-details span {
+    font-size: 8px;
+  }
+
+  .pratas-hero-visual {
+    min-height: auto;
+    padding: 0 5%;
+    margin: 0 0 10px;
+  }
+
+  .pratas-hero-image {
+    width: 100%;
+    height: min(390px, 105vw);
+  }
+
+  .pratas-orbit-one {
+    width: 100%;
+  }
+
+  .pratas-orbit-two {
+    width: 112%;
+  }
+
+  .pratas-floating-note {
+    top: 5%;
+    right: -2%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .pratas-hero-caption {
+    left: 7%;
+    width: 86%;
+    bottom: 14px;
+  }
+
+  .pratas-scroll-cue {
+    display: none;
+  }
+
+  .pratas-collection-section,
+  .pratas-categories-section,
+  .pratas-care-section {
+    padding: 70px 5%;
+  }
+
+  .pratas-section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .pratas-section-heading h2,
+  .pratas-manifesto-content h2,
+  .pratas-care-intro h2,
+  .pratas-cta-section h2 {
+    font-size: 42px;
+  }
+
+  .pratas-section-heading>p {
+    margin-top: 18px;
+  }
+
+  .pratas-search-panel {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .pratas-search-panel label {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .pratas-search-panel input {
+    flex-basis: 60%;
+  }
+
+  .pratas-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pratas-filter-list {
+    gap: 4px;
+  }
+
+  .pratas-filter-list button {
+    padding: 9px 11px;
+    font-size: 9px;
+  }
+
+  .pratas-sort {
+    align-self: flex-end;
+  }
+
+  .pratas-results-line {
+    gap: 12px;
+    font-size: 8px;
+  }
+
+  .pratas-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 12px;
+  }
+
+  .pratas-product-image {
+    height: clamp(180px, 58vw, 290px);
+  }
+
+  .pratas-product-badge {
+    top: 8px;
+    left: 8px;
+    padding: 6px;
+    font-size: 6px;
+    letter-spacing: .06em;
+  }
+
+  .pratas-favorite-button {
+    width: 31px;
+    height: 31px;
+    top: 7px;
+    right: 7px;
+    font-size: 18px;
+  }
+
+  .pratas-quick-view {
+    display: none;
+  }
+
+  .pratas-product-info {
+    padding-top: 12px;
+  }
+
+  .pratas-product-info h3 {
+    font-size: 16px;
+    margin: 7px 0 12px;
+  }
+
+  .pratas-product-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pratas-product-bottom button {
+    font-size: 10px;
+  }
+
+  .pratas-categories-grid {
+    gap: 10px;
+  }
+
+  .pratas-category-card {
+    height: 270px;
+  }
+
+  .pratas-category-content {
+    left: 13px;
+    right: 13px;
+    bottom: 15px;
+  }
+
+  .pratas-category-content strong {
+    font-size: 22px;
+  }
+
+  .pratas-category-content small {
+    font-size: 9px;
+  }
+
+  .pratas-manifesto-section {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 75px 7%;
+    gap: 40px;
+  }
+
+  .pratas-manifesto-image {
+    height: 370px;
+    margin-right: 15px;
+  }
+
+  .pratas-manifesto-content>p:not(.pratas-eyebrow) {
+    font-size: 12px;
+  }
+
+  .pratas-benefits-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 28px 5%;
+    gap: 25px 16px;
+  }
+
+  .pratas-benefit {
+    gap: 10px;
+  }
+
+  .pratas-benefit>span {
+    font-size: 21px;
+  }
+
+  .pratas-benefit strong {
+    font-size: 10px;
+  }
+
+  .pratas-benefit p {
+    font-size: 9px;
+  }
+
+  .pratas-care-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  .pratas-testimonial-section {
+    padding: 70px 6%;
+  }
+
+  .pratas-testimonial-section blockquote {
+    font-size: 29px;
+  }
+
+  .pratas-cta-section {
+    padding: 65px 6%;
+    display: block;
+  }
+
+  .pratas-cta-section .pratas-button {
+    margin-top: 28px;
+  }
+
+  .pratas-footer {
+    padding: 35px 6% 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pratas-footer-links {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: flex-start;
+    gap: 17px;
+  }
+
+  .pratas-footer-social {
+    text-align: right;
+  }
+
+  .pratas-footer-copy {
+    text-align: left;
+  }
+
+  .pratas-cart-drawer {
+    padding: 22px;
+  }
+
+  .pratas-quick-backdrop {
+    padding: 14px;
+  }
+
+  .pratas-quick-modal {
+    display: block;
+    width: min(420px, 100%);
+    max-height: 92vh;
+  }
+
+  .pratas-quick-modal>img {
+    height: 240px;
+    min-height: 0;
+  }
+
+  .pratas-quick-info {
+    padding: 25px;
+  }
+
+  .pratas-quick-info h2 {
+    font-size: 27px;
+    margin: 0 0 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .pratas-topline {
+    font-size: 6px;
+  }
+
+  .pratas-logo>span {
+    font-size: 18px;
+  }
+
+  .pratas-bag-button {
+    font-size: 10px;
+    padding: 8px 9px;
+  }
+
+  .pratas-hero h1 {
+    font-size: 51px;
+  }
+
+  .pratas-hero-actions {
+    gap: 16px;
+  }
+
+  .pratas-button {
+    padding: 14px 15px;
+    gap: 12px;
+  }
+
+  .pratas-hero-details {
+    gap: 12px;
+  }
+
+  .pratas-hero-details strong {
+    font-size: 20px;
+  }
+
+  .pratas-products-grid {
+    gap: 24px 9px;
+  }
+
+  .pratas-product-info h3 {
+    font-size: 14px;
+  }
+
+  .pratas-category-card {
+    height: 230px;
+  }
+
+  .pratas-category-content strong {
+    font-size: 19px;
+  }
+
+  .pratas-cart-item {
+    grid-template-columns: 62px minmax(0, 1fr) 22px;
+    gap: 10px;
+  }
+
+  .pratas-cart-item>img {
+    width: 62px;
+    height: 82px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

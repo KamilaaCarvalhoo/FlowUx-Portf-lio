@@ -1,0 +1,1192 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+.nexus-page {
+  --black: #080909;
+  --black-2: #101211;
+  --black-3: #171a18;
+  --line: rgba(255,255,255,.11);
+  --white: #f5f7f3;
+  --gray: #919891;
+  --neon: #b8ff28;
+  --neon-dark: #7da915;
+  --red: #ff4b35;
+
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+  overflow: hidden;
+}
+
+.nexus-page *,
+.nexus-page *::before,
+.nexus-page *::after {
+  box-sizing: border-box;
+}
+
+.nexus-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nexus-page img {
+  display: block;
+  width: 100%;
+}
+
+.nexus-logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--white);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nexus-logo > span:first-child {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  background: var(--neon);
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 900;
+  transform: skew(-8deg);
+}
+
+.logo-accent {
+  color: var(--neon);
+}
+
+
+.nexus-navbar {
+  width: min(1240px, calc(100% - 50px));
+  min-height: 88px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.nexus-navbar nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nexus-navbar nav a {
+  color: #a7ada7;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.nexus-navbar nav a:hover {
+  color: var(--neon);
+}
+
+.nexus-nav-button {
+  padding: 12px 18px;
+  border: 1px solid var(--neon);
+  color: var(--neon) !important;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nexus-nav-button:hover {
+  background: var(--neon);
+  color: var(--black) !important;
+}
+
+/* HERO */
+.nexus-hero {
+  width: min(1240px, calc(100% - 50px));
+  min-height: 690px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background: var(--black-2);
+  border: 1px solid var(--line);
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: .24;
+  background-image:
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 55px 55px;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: 10%;
+  top: 10%;
+  border-radius: 50%;
+  background: rgba(184,255,40,.08);
+  filter: blur(50px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 4;
+  padding: 90px 30px 70px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--neon);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.hero-kicker span {
+  width: 27px;
+  height: 2px;
+  background: var(--neon);
+}
+
+.hero-content h1 {
+  margin: 25px 0 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(76px, 9vw, 130px);
+  font-weight: 900;
+  line-height: .76;
+  letter-spacing: -4px;
+}
+
+.hero-content h1 span,
+.hero-content h1 strong,
+.hero-content h1 em {
+  display: block;
+}
+
+.hero-content h1 span {
+  color: var(--white);
+}
+
+.hero-content h1 strong {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255,255,255,.85);
+}
+
+.hero-content h1 em {
+  color: var(--neon);
+  font-style: normal;
+}
+
+.hero-content > p {
+  max-width: 480px;
+  color: #919891;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.nexus-primary,
+.nexus-secondary {
+  min-height: 47px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  padding: 0 20px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nexus-primary {
+  background: var(--neon);
+  color: var(--black);
+}
+
+.nexus-primary:hover {
+  background: #caff5a;
+  transform: translateY(-2px);
+}
+
+.nexus-primary span {
+  font-size: 14px;
+}
+
+.nexus-secondary {
+  border: 1px solid rgba(255,255,255,.22);
+  color: var(--white);
+}
+
+.nexus-secondary:hover {
+  border-color: var(--neon);
+  color: var(--neon);
+}
+
+.hero-scroll {
+  position: absolute;
+  left: 70px;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #666e67;
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+
+.hero-scroll i {
+  width: 40px;
+  height: 1px;
+  background: #555d56;
+}
+
+.hero-athlete {
+  min-height: 690px;
+  position: relative;
+}
+
+.athlete-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.athlete-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--black-2) 0%, transparent 35%),
+    linear-gradient(0deg, rgba(0,0,0,.5), transparent 50%);
+}
+
+.athlete-image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+.hero-tech-card {
+  position: absolute;
+  z-index: 5;
+  right: 25px;
+  top: 28px;
+  width: 185px;
+  padding: 16px;
+  background: rgba(8,9,9,.87);
+  border: 1px solid rgba(184,255,40,.35);
+  backdrop-filter: blur(8px);
+}
+
+.hero-tech-card > span {
+  color: #747c74;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero-tech-card strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--neon);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 45px;
+  line-height: .9;
+}
+
+.hero-tech-card small {
+  color: var(--neon);
+  font-size: 6px;
+}
+
+.mini-chart {
+  height: 30px;
+  margin-top: 13px;
+  display: flex;
+  align-items: end;
+  gap: 4px;
+}
+
+.mini-chart i {
+  flex: 1;
+  background: var(--neon);
+  opacity: .65;
+}
+
+.mini-chart i:nth-child(1) { height: 25%; }
+.mini-chart i:nth-child(2) { height: 45%; }
+.mini-chart i:nth-child(3) { height: 35%; }
+.mini-chart i:nth-child(4) { height: 60%; }
+.mini-chart i:nth-child(5) { height: 52%; }
+.mini-chart i:nth-child(6) { height: 80%; }
+.mini-chart i:nth-child(7) { height: 100%; }
+
+.hero-coordinate {
+  position: absolute;
+  z-index: 4;
+  right: 25px;
+  bottom: 23px;
+  color: rgba(255,255,255,.5);
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+/* STATS */
+.nexus-stats {
+  width: min(1240px, calc(100% - 50px));
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+.nexus-stat {
+  min-height: 125px;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--line);
+}
+
+.nexus-stat:last-child {
+  border-right: 0;
+}
+
+.nexus-stat strong {
+  color: var(--neon);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 39px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.nexus-stat span {
+  margin-top: 6px;
+  color: #777f78;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+/* INTRO */
+.nexus-intro {
+  width: min(1100px, calc(100% - 50px));
+  margin: 130px auto;
+  display: grid;
+  grid-template-columns: .45fr 1fr 1fr;
+  gap: 50px;
+  align-items: end;
+}
+
+.section-index {
+  align-self: start;
+  color: #565e57;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.nexus-label {
+  color: var(--neon);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.nexus-intro h2 {
+  margin: 13px 0 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(55px, 6vw, 80px);
+  font-weight: 800;
+  line-height: .82;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.nexus-intro h2 span {
+  color: transparent;
+  -webkit-text-stroke: 1px #717871;
+}
+
+.nexus-intro > p {
+  margin: 0;
+  color: #818981;
+  font-size: 10px;
+  line-height: 1.9;
+}
+
+/* TREINOS */
+.training-section {
+  padding: 100px max(25px, calc((100vw - 1240px) / 2));
+  background: var(--white);
+  color: var(--black);
+}
+
+.section-heading-dark {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.section-heading-dark h2 {
+  margin: 10px 0 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(55px, 6vw, 80px);
+  font-weight: 900;
+  line-height: .8;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.heading-number {
+  color: #8b928b;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+}
+
+.discipline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.discipline-card {
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+  background: #1b1e1c;
+}
+
+.discipline-card img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: transform .6s ease, filter .6s ease;
+}
+
+.discipline-card:hover img {
+  transform: scale(1.06);
+  filter: grayscale(15%);
+}
+
+.discipline-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.88), transparent 65%);
+}
+
+.discipline-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--neon);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.discipline-content {
+  position: absolute;
+  z-index: 2;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  color: white;
+}
+
+.discipline-content h3 {
+  margin: 0 0 8px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.discipline-content p {
+  max-width: 320px;
+  margin: 0 0 18px;
+  color: #b8bdb8;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.discipline-content a {
+  color: var(--neon);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* PERFORMANCE */
+.performance-section {
+  width: min(1100px, calc(100% - 50px));
+  margin: 130px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.performance-image {
+  min-height: 590px;
+  position: relative;
+  overflow: hidden;
+}
+
+.performance-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.6), transparent 60%);
+}
+
+.performance-image img {
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.performance-tag {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px 13px;
+  background: var(--neon);
+  color: var(--black);
+  font-size: 7px;
+  font-weight: 900;
+}
+
+.performance-content h2 {
+  margin: 15px 0 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(58px, 6vw, 83px);
+  font-weight: 800;
+  line-height: .78;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.performance-content h2 em {
+  color: var(--neon);
+  font-style: normal;
+}
+
+.performance-content > p {
+  max-width: 420px;
+  color: #858d86;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.performance-list {
+  margin: 30px 0;
+  border-top: 1px solid var(--line);
+}
+
+.performance-list div {
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.performance-list strong {
+  color: var(--neon);
+  font-size: 8px;
+}
+
+.performance-list span {
+  color: #c1c6c1;
+  font-size: 9px;
+}
+
+/* PLANOS */
+.plans-section {
+  padding: 110px max(25px, calc((100vw - 1240px) / 2));
+  background: var(--black-2);
+  border-top: 1px solid var(--line);
+}
+
+.plans-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.plans-heading h2 {
+  margin: 12px 0 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(55px, 6vw, 80px);
+  font-weight: 900;
+  line-height: .78;
+  letter-spacing: -2px;
+}
+
+.plans-heading h2 em {
+  color: var(--neon);
+  font-style: normal;
+}
+
+.plans-heading p {
+  max-width: 250px;
+  color: #777e77;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.plan-card {
+  min-height: 500px;
+  padding: 28px;
+  position: relative;
+  background: #171a18;
+  border: 1px solid var(--line);
+}
+
+.plan-card.plan-featured {
+  background: var(--neon);
+  color: var(--black);
+  border-color: var(--neon);
+  transform: translateY(-13px);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: var(--black);
+  color: var(--neon);
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.plan-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plan-top span {
+  color: #707770;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.plan-featured .plan-top span {
+  color: #52651e;
+}
+
+.plan-top strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 43px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.plan-card > p {
+  min-height: 35px;
+  margin: 18px 0;
+  color: #858d86;
+  font-size: 9px;
+}
+
+.plan-featured > p {
+  color: #52651e;
+}
+
+.plan-price {
+  display: flex;
+  align-items: end;
+  gap: 4px;
+  margin-top: 30px;
+}
+
+.plan-price small {
+  margin-bottom: 9px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.plan-price strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 70px;
+  line-height: .8;
+  font-weight: 900;
+}
+
+.plan-price span {
+  margin-bottom: 5px;
+  color: #777e77;
+  font-size: 8px;
+}
+
+.plan-featured .plan-price span {
+  color: #52651e;
+}
+
+.plan-line {
+  margin: 30px 0 17px;
+  border-top: 1px solid var(--line);
+}
+
+.plan-featured .plan-line {
+  border-color: rgba(0,0,0,.15);
+}
+
+.plan-card ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.plan-card li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+  color: #a9afa9;
+  font-size: 8px;
+}
+
+.plan-featured li {
+  color: #3f4e18;
+}
+
+.plan-card li span {
+  color: var(--neon);
+  font-size: 13px;
+}
+
+.plan-featured li span {
+  color: #4d6413;
+}
+
+.plan-button {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  min-height: 45px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.18);
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.plan-button:hover {
+  background: var(--neon);
+  color: var(--black);
+}
+
+.plan-featured .plan-button {
+  background: var(--black);
+  color: var(--neon);
+  border-color: var(--black);
+}
+
+
+.quote-section {
+  width: min(1000px, calc(100% - 50px));
+  margin: 130px auto;
+  text-align: center;
+}
+
+.quote-symbol {
+  color: var(--neon);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 80px;
+  line-height: .4;
+}
+
+.quote-section blockquote {
+  margin: 25px auto;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 700;
+  line-height: .9;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.quote-section blockquote em {
+  color: var(--neon);
+  font-style: normal;
+}
+
+.quote-line {
+  color: #626a62;
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+
+
+.nexus-cta {
+  width: min(1240px, calc(100% - 50px));
+  min-height: 390px;
+  margin: auto;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr .7fr;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(184,255,40,.09), transparent 50%),
+    #151815;
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.nexus-cta::before {
+  content: "NEXUS";
+  position: absolute;
+  right: -70px;
+  bottom: -90px;
+  color: rgba(184,255,40,.04);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 280px;
+  font-weight: 900;
+}
+
+.nexus-cta h2 {
+  margin: 12px 0 16px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(65px, 7vw, 95px);
+  font-weight: 900;
+  line-height: .75;
+  letter-spacing: -3px;
+}
+
+.nexus-cta h2 em {
+  color: var(--neon);
+  font-style: normal;
+}
+
+.nexus-cta p {
+  color: #818881;
+  font-size: 10px;
+}
+
+.nexus-cta .nexus-primary {
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.cta-grid {
+  position: relative;
+  z-index: 2;
+  width: 270px;
+  height: 270px;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line);
+}
+
+.cta-grid span {
+  display: grid;
+  place-items: center;
+  color: #687068;
+  font-size: 7px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.cta-grid strong {
+  grid-column: span 3;
+  display: grid;
+  place-items: center;
+  color: var(--neon);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.nexus-footer {
+  width: min(1240px, calc(100% - 50px));
+  margin: auto;
+  padding: 70px 0 25px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid var(--line);
+}
+
+.footer-main small {
+  color: #5f675f;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.footer-main p {
+  margin: 8px 0 0;
+  color: #929992;
+  font-size: 9px;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #555d56;
+  font-size: 7px;
+}
+
+
+.discipline-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.discipline-card {
+  min-height: 470px;
+}
+
+.discipline-content h3 {
+  font-size: 28px;
+}
+
+@media (max-width: 1200px) {
+  .discipline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .nexus-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-athlete {
+    min-height: 520px;
+  }
+
+  .nexus-intro {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-index {
+    grid-column: span 2;
+  }
+
+  .discipline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-featured {
+    transform: none;
+  }
+
+  .performance-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .nexus-navbar,
+  .nexus-hero,
+  .nexus-stats,
+  .nexus-intro,
+  .performance-section,
+  .quote-section,
+  .nexus-cta,
+  .nexus-footer {
+    width: calc(100% - 24px);
+  }
+
+  .nexus-navbar nav {
+    display: none;
+  }
+
+  .nexus-nav-button {
+    padding: 11px 12px;
+  }
+
+  .nexus-hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 55px 25px 65px;
+  }
+
+  .hero-content h1 {
+    font-size: 75px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nexus-primary,
+  .nexus-secondary {
+    width: 100%;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .hero-athlete {
+    min-height: 420px;
+  }
+
+  .hero-tech-card {
+    right: 12px;
+    top: 12px;
+  }
+
+  .nexus-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nexus-stat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .nexus-stat:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nexus-intro {
+    margin: 90px auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-index {
+    grid-column: auto;
+  }
+
+  .training-section,
+  .plans-section {
+    padding: 75px 12px;
+  }
+
+  .section-heading-dark,
+  .plans-heading {
+    display: block;
+  }
+
+  .heading-number {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .discipline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discipline-card {
+    min-height: 450px;
+  }
+
+  .performance-section {
+    margin: 90px auto;
+  }
+
+  .performance-image {
+    min-height: 420px;
+  }
+
+  .plans-heading p {
+    margin-top: 20px;
+  }
+
+  .plan-card {
+    min-height: 480px;
+  }
+
+  .nexus-cta {
+    grid-template-columns: 1fr;
+    padding: 45px 25px;
+  }
+
+  .cta-grid {
+    justify-self: start;
+    margin-top: 45px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-main .nexus-logo {
+    grid-column: span 2;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 430px) {
+  .nexus-nav-button {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 63px;
+  }
+
+  .hero-tech-card {
+    width: 155px;
+  }
+
+  .nexus-stat strong {
+    font-size: 32px;
+  }
+
+  .performance-content h2 {
+    font-size: 60px;
+  }
+}
