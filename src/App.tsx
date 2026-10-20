@@ -9,9 +9,9 @@ import Sites from "./components/Sites/Sites"
 import Arquitetura from "./pages/Arquitetura/Arquitetura"
 import Floricultura from "./pages/Floricultura/Floricultura"
 import Pizzaria from "./pages/Pizzaria/Pizzaria"
-import Petshop from "./pages/Petshop/Petshop"
+import Petshop from "./pages/PetShop/Petshop";
 import Academia from "./pages/Academia/Academia"
-import Pratas from "./pages/Pratas/Pratas"
+import Pratas from "./pages/Pratas/pratas";
 
 
 
@@ -22,9 +22,7 @@ function Portfolio() {
 
       <main>
 
-        {/* =================================
-            HERO
-        ================================= */}
+    
 
         <section
           className="hero"
@@ -69,7 +67,6 @@ function Portfolio() {
           </div>
 
 
-          {/* LOGO */}
 
           <div className="hero-logo">
 
@@ -85,23 +82,15 @@ function Portfolio() {
         </section>
 
 
-        {/* =================================
-            PROJETOS
-        ================================= */}
+     
 
         <Projects />
 
 
-        {/* =================================
-            SITES DESENVOLVIDOS
-        ================================= */}
 
         <Sites />
 
 
-        {/* =================================
-            SOBRE A FLOWUX
-        ================================= */}
 
         <section
           className="about"
@@ -111,7 +100,7 @@ function Portfolio() {
           <div className="about-container">
 
 
-            {/* TEXTO */}
+           
 
             <div className="about-content">
 
@@ -147,7 +136,7 @@ function Portfolio() {
             </div>
 
 
-            {/* DESTAQUES */}
+  
 
             <div className="about-highlights">
 
@@ -209,9 +198,7 @@ function Portfolio() {
         </section>
 
 
-        {/* =================================
-            SERVIÇOS
-        ================================= */}
+
 
         <section
           className="services"
@@ -240,9 +227,7 @@ function Portfolio() {
           <div className="services-grid">
 
 
-            {/* =================================
-                DESENVOLVIMENTO WEB
-            ================================= */}
+        
 
             <div className="service-card">
 
@@ -266,9 +251,6 @@ function Portfolio() {
             </div>
 
 
-            {/* =================================
-                APLICATIVOS
-            ================================= */}
 
             <div className="service-card">
 
@@ -293,9 +275,7 @@ function Portfolio() {
             </div>
 
 
-            {/* =================================
-                GAMES
-            ================================= */}
+          
 
             <div className="service-card">
 
@@ -320,9 +300,7 @@ function Portfolio() {
             </div>
 
 
-            {/* =================================
-                BACKEND
-            ================================= */}
+         
 
             <div className="service-card">
 
@@ -347,9 +325,7 @@ function Portfolio() {
             </div>
 
 
-            {/* =================================
-                UX/UI
-            ================================= */}
+           
 
             <div className="service-card">
 
@@ -378,9 +354,7 @@ function Portfolio() {
         </section>
 
 
-        {/* =================================
-            CONTATO
-        ================================= */}
+       
 
         <section
           className="contact"
@@ -390,14 +364,14 @@ function Portfolio() {
           <div className="contact-content">
 
 
-            {/* TAG */}
+    
 
             <span className="contact-tag">
               ✦ VAMOS CRIAR JUNTOS?
             </span>
 
 
-            {/* TÍTULO */}
+      
 
             <h2>
               Sua ideia pode ser
@@ -405,7 +379,7 @@ function Portfolio() {
             </h2>
 
 
-            {/* DESCRIÇÃO */}
+     
 
             <p>
               Conte para a FlowUx o que você deseja criar.
@@ -414,14 +388,11 @@ function Portfolio() {
             </p>
 
 
-            {/* =================================
-                CONTATOS
-            ================================= */}
+          
 
             <div className="contact-links">
 
 
-              {/* E-MAIL */}
 
               <a
                 href="mailto:flowux.design@outlook.com"
@@ -447,7 +418,6 @@ function Portfolio() {
               </a>
 
 
-              {/* INSTAGRAM */}
 
               <a
                 href="https://www.instagram.com/flowux.desing"
@@ -477,9 +447,7 @@ function Portfolio() {
             </div>
 
 
-            {/* =================================
-                BOTÕES
-            ================================= */}
+          
 
             <div className="contact-buttons">
 
@@ -513,9 +481,7 @@ function Portfolio() {
 }
 
 
-/* =========================================
-   ROTAS
-========================================= */
+
 
 function App() {
 
@@ -523,9 +489,7 @@ function App() {
 
     <Routes>
 
-      {/* =================================
-          PORTFÓLIO PRINCIPAL
-      ================================= */}
+   
 
       <Route
         path="/"
@@ -538,9 +502,7 @@ function App() {
       />
 
 
-      {/* =================================
-          LANDING PAGE FLORICULTURA
-      ================================= */}
+     
 
       <Route
         path="/floricultura"
@@ -548,9 +510,6 @@ function App() {
       />
 
 
-      {/* =================================
-          LANDING PAGE ARQUITETURA
-      ================================= */}
 
       <Route
         path="/arquitetura"
