@@ -1,6 +1,17 @@
 function Sites() {
   const sites = [
     
+{
+  name: "Belle Sucrée",
+  category: "E-commerce • Confeitaria",
+  description:
+    "E-commerce de confeitaria com identidade visual sofisticada, catálogo de doces e uma experiência digital envolvente.",
+  technology: "React • JavaScript • CSS • Vite",
+  image: "/belle-sucree.png",
+  link: "https://belle-sucree-omhzvlwyz-kamilaacarvalhoos-projects.vercel.app",
+},
+
+
     {
       name: "AuroraGlasses",
       category: "Website",
@@ -78,9 +89,7 @@ function Sites() {
       id="sites"
     >
 
-      {/* =================================
-          TÍTULO
-      ================================= */}
+
 
       <div className="section-title">
 
@@ -101,9 +110,7 @@ function Sites() {
       </div>
 
 
-      {/* =================================
-          GRID
-      ================================= */}
+  
 
       <div className="sites-grid">
 
@@ -114,9 +121,6 @@ function Sites() {
             key={site.name}
           >
 
-            {/* =================================
-                IMAGEM
-            ================================= */}
 
             <div className="site-image">
 
@@ -128,9 +132,7 @@ function Sites() {
             </div>
 
 
-            {/* =================================
-                CONTEÚDO
-            ================================= */}
+      
 
             <div className="site-content">
 
@@ -147,9 +149,7 @@ function Sites() {
               </p>
 
 
-              {/* =================================
-                  TECNOLOGIAS
-              ================================= */}
+           
 
               <div className="site-tech">
 
@@ -166,9 +166,6 @@ function Sites() {
               </div>
 
 
-              {/* =================================
-                  BOTÃO
-              ================================= */}
 
               {site.link !== "#" ? (
 
