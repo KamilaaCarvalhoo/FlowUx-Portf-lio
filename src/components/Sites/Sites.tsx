@@ -8,7 +8,7 @@ function Sites() {
     "E-commerce de confeitaria com identidade visual sofisticada, catálogo de doces e uma experiência digital envolvente.",
   technology: "React • JavaScript • CSS • Vite",
   image: "/logo.png",
-  link: "https://belle-sucree-omhzvlwyz-kamilaacarvalhoos-projects.vercel.app",
+  link: "https://belle-sucree-five.vercel.app",
 },
 
 
