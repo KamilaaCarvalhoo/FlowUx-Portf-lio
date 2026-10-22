@@ -2,7 +2,7 @@ function Sites() {
   const sites = [
     
 {
-  name: "Belle Sucrée",
+  name: "Belle Sucrée", 
   category: "E-commerce • Confeitaria",
   description:
     "E-commerce de confeitaria com identidade visual sofisticada, catálogo de doces e uma experiência digital envolvente.",
@@ -11,16 +11,6 @@ function Sites() {
   link: "https://belle-sucree-five.vercel.app",
 },
 
-
-    {
-      name: "AuroraGlasses",
-      category: "Website",
-      description:
-        "Experiência digital desenvolvida para apresentar a marca, seus produtos e sua identidade visual.",
-      technology: "HTML • CSS • JavaScript",
-      image: "/auroraglasses.png",
-      link: "https://www.auroraglasses.com.br",
-    },
 
     {
       name: "Florêa",
@@ -51,6 +41,17 @@ function Sites() {
   image: "/forno27.png",
   link: "/pizzaria",
 },
+
+{
+  name: "Pixel News",
+  category: "Portal Gamer • Notícias e Reviews",
+  description:
+    "Portal de notícias sobre videogames com novidades da indústria, lançamentos, análises, busca por notícias e filtros por plataforma. Integrado a uma API de notícias.",
+  technology: "React • TypeScript • Vite • CSS • GNews API",
+  image: "/Logo Gamer.png",
+  link: "/pixel-news",
+},
+
 
   {
   name: "Petshop",

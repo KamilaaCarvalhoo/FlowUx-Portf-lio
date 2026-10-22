@@ -2356,9 +2356,6 @@ a {
 }
 
 
-/* =========================================
-   RESPONSIVO
-========================================= */
 
 @media (max-width: 1000px) {
 
@@ -2441,9 +2438,7 @@ a {
 
 }
 
-/* =========================================
-   REFINOS FINAIS — CONTATO E INSTAGRAM
-========================================= */
+
 
 .contact-link {
   position: relative;
@@ -2493,9 +2488,7 @@ a {
   color: #ffffff;
 }
 
-/* =========================================
-   ACESSIBILIDADE
-========================================= */
+
 
 a:focus-visible,
 button:focus-visible {
@@ -2503,9 +2496,7 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-/* =========================================
-   MOBILE — CONTATO
-========================================= */
+
 
 @media (max-width: 700px) {
   .contact-link {
@@ -2518,9 +2509,7 @@ button:focus-visible {
 }
 
 
-/* =========================================
-   AJUSTE FINAL — HERO FLOWUX
-   ========================================= */
+
 
 .hero-content {
   width: 100%;
