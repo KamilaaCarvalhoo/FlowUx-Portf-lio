@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 function Projects() {
   const projects = [
     {
@@ -10,6 +12,7 @@ function Projects() {
         "React • TypeScript • Node.js • Express • PostgreSQL • Prisma • JWT",
       image: "/tervalya-crm.png",
       link: "https://frontend-ln40dvlqv-kamilaacarvalhoos-projects.vercel.app/login",
+      caseStudy: "/projetos/tervalya-crm",
       platform: "Web • SaaS",
       status: "Publicado e funcionando",
       audience: "Empresas e equipes comerciais",
@@ -55,6 +58,7 @@ function Projects() {
       technology: "Unity • C# • Blender • Mixamo",
       image: "/ryllo.png",
       link: "https://play.google.com/store/apps/details?id=com.flowux.ryllo&hl=pt_BR",
+      caseStudy: "/projetos/ryllo",
       platform: "Mobile",
       status: "Publicado e funcionando",
       audience: "Jogadores mobile",
@@ -113,6 +117,7 @@ function Projects() {
             }`}
             key={project.name}
           >
+            {/* IMAGEM DO PROJETO */}
             <div className="project-image">
               <img
                 src={project.image}
@@ -131,8 +136,15 @@ function Projects() {
                   FULL STACK MOBILE
                 </span>
               )}
+
+              {project.name === "Ryllo" && (
+                <span className="project-featured-label">
+                  GAME DEVELOPMENT
+                </span>
+              )}
             </div>
 
+            {/* CONTEÚDO */}
             <div className="project-content">
               <span className="project-category">
                 {project.category}
@@ -142,6 +154,7 @@ function Projects() {
 
               <p>{project.description}</p>
 
+              {/* INFORMAÇÕES */}
               <div className="project-info">
                 <div className="project-info-item">
                   <strong>Plataforma</strong>
@@ -159,6 +172,7 @@ function Projects() {
                 </div>
               </div>
 
+              {/* FUNCIONALIDADES */}
               <div className="project-features">
                 <strong>Funcionalidades</strong>
 
@@ -172,18 +186,18 @@ function Projects() {
                 </ul>
               </div>
 
+              {/* TECNOLOGIAS */}
               <div className="project-technologies">
                 <strong>Tecnologias e ferramentas</strong>
 
                 <div className="technology-tags">
-                  {project.technology
-                    .split(" • ")
-                    .map((tech) => (
-                      <span key={tech}>{tech}</span>
-                    ))}
+                  {project.technology.split(" • ").map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
                 </div>
               </div>
 
+              {/* BOTÕES */}
               <div className="project-buttons">
                 {project.link !== "#" ? (
                   <a
@@ -205,12 +219,12 @@ function Projects() {
                 )}
 
                 {project.caseStudy && (
-                  <a
-                    href={project.caseStudy}
+                  <Link
+                    to={project.caseStudy}
                     className="project-button project-button-secondary"
                   >
                     Ver estudo de caso →
-                  </a>
+                  </Link>
                 )}
               </div>
             </div>

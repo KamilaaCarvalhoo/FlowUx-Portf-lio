@@ -3,6 +3,7 @@ import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
 
+
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
 import Sites from "./components/Sites/Sites";
@@ -15,8 +16,12 @@ import Academia from "./pages/Academia/Academia";
 import Pratas from "./pages/Pratas/pratas";
 import PixelNews from "./pages/PixelNews/PixelNews";
 
-// Página de estudo de caso da Kiva Drive
+
 import KivaDriveCaseStudy from "./pages/KivaDriveCaseStudy";
+import RylloCaseStudy from "./pages/RylloCaseStudy";
+import TervalyaCRMCaseStudy from "./pages/TervalyaCRMCaseStudy.jsx";
+
+
 
 function Portfolio() {
   return (
@@ -24,7 +29,7 @@ function Portfolio() {
       <Navbar />
 
       <main>
-        {/* HERO */}
+     
         <section className="hero" id="inicio">
           <div className="hero-content">
             <span className="hero-tag">
@@ -63,13 +68,13 @@ function Portfolio() {
           </div>
         </section>
 
-        {/* PROJETOS */}
+     
         <Projects />
 
-        {/* SITES */}
+     
         <Sites />
 
-        {/* SOBRE */}
+   
         <section className="about" id="sobre">
           <div className="about-container">
             <div className="about-content">
@@ -127,7 +132,7 @@ function Portfolio() {
           </div>
         </section>
 
-        {/* SERVIÇOS */}
+  
         <section className="services" id="servicos">
           <div className="section-title">
             <span>✦ O QUE FAZEMOS</span>
@@ -248,7 +253,9 @@ function Portfolio() {
                 href="mailto:flowux.design@outlook.com"
                 className="contact-link"
               >
-                <div className="contact-icon">✉</div>
+                <div className="contact-icon">
+                  ✉
+                </div>
 
                 <div>
                   <strong>E-mail</strong>
@@ -297,14 +304,25 @@ function Portfolio() {
   );
 }
 
+// ======================================================
+// ROTAS DA APLICAÇÃO
+// ======================================================
+
 function App() {
   return (
     <Routes>
-      {/* Página principal */}
-      <Route path="/" element={<Portfolio />} />
-      <Route path="/inicio" element={<Portfolio />} />
+      {/* PÁGINA PRINCIPAL */}
+      <Route
+        path="/"
+        element={<Portfolio />}
+      />
 
-      {/* Sites e projetos */}
+      <Route
+        path="/inicio"
+        element={<Portfolio />}
+      />
+
+      {/* SITES E PROJETOS */}
       <Route
         path="/floricultura"
         element={<Floricultura />}
@@ -340,10 +358,22 @@ function App() {
         element={<PixelNews />}
       />
 
-      {/* Estudo de caso Kiva Drive */}
+      {/* ESTUDO DE CASO KIVA DRIVE */}
       <Route
         path="/projetos/kiva-drive"
         element={<KivaDriveCaseStudy />}
+      />
+
+      {/* ESTUDO DE CASO RYLLO */}
+      <Route
+        path="/projetos/ryllo"
+        element={<RylloCaseStudy />}
+      />
+
+      {/* ESTUDO DE CASO TERVALYA CRM */}
+      <Route
+        path="/projetos/tervalya-crm"
+        element={<TervalyaCRMCaseStudy />}
       />
     </Routes>
   );

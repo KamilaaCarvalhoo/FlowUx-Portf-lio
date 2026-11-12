@@ -1,0 +1,2042 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* =====================================================
+   TERVALYA CRM - CONFIGURAÇÕES GERAIS
+===================================================== */
+
+.tervalya-case {
+  --tervalya-bg: #080d12;
+  --tervalya-bg-light: #0d151c;
+  --tervalya-card: #111c24;
+  --tervalya-card-light: #16242d;
+  --tervalya-accent: #39d6bd;
+  --tervalya-accent-light: #8af5df;
+  --tervalya-white: #ffffff;
+  --tervalya-text: #c5d1d7;
+  --tervalya-muted: #81919a;
+  --tervalya-border: rgba(117, 192, 181, 0.15);
+
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--tervalya-bg);
+  color: var(--tervalya-white);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.tervalya-case * {
+  box-sizing: border-box;
+}
+
+.tervalya-case a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tervalya-case img {
+  display: block;
+  max-width: 100%;
+}
+
+.tervalya-case h1,
+.tervalya-case h2,
+.tervalya-case h3 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.tervalya-case p {
+  color: var(--tervalya-text);
+  line-height: 1.8;
+}
+
+/* =====================================================
+   NAVEGAÇÃO
+===================================================== */
+
+.tervalya-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  width: 100%;
+  min-height: 85px;
+  padding: 0 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(8,13,18,0.72);
+  backdrop-filter: blur(18px);
+}
+
+.tervalya-back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #b4c2c8 !important;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.tervalya-back:hover {
+  color: var(--tervalya-accent) !important;
+}
+
+.tervalya-back span {
+  font-size: 20px;
+  color: var(--tervalya-accent);
+}
+
+.tervalya-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.tervalya-brand span {
+  color: var(--tervalya-accent);
+}
+
+.tervalya-brand small {
+  margin-top: 2px;
+
+  color: var(--tervalya-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.tervalya-nav-link {
+  padding: 12px 20px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 7px;
+
+  color: var(--tervalya-accent) !important;
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.tervalya-nav-link:hover {
+  background: var(--tervalya-accent);
+  color: #07110f !important;
+  box-shadow: 0 0 25px rgba(57,214,189,0.2);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.tervalya-hero {
+  position: relative;
+  min-height: 760px;
+
+  padding: 150px 9% 110px;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 60px;
+
+  background:
+    radial-gradient(
+      ellipse at 80% 45%,
+      rgba(27, 119, 111, 0.15),
+      transparent 45%
+    ),
+    linear-gradient(145deg, #080d12 0%, #0b151b 100%);
+}
+
+.tervalya-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.tervalya-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 30px;
+  padding: 10px 15px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 4px;
+
+  background: rgba(57,214,189,0.05);
+  color: var(--tervalya-accent-light);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tervalya-eyebrow span {
+  font-size: 15px;
+}
+
+.tervalya-hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 85px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -5px;
+}
+
+.tervalya-hero h1 span {
+  display: block;
+  color: var(--tervalya-accent);
+}
+
+.tervalya-hero h2 {
+  margin: 27px 0 17px;
+
+  color: #cbd5da;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.tervalya-hero h2 strong {
+  color: var(--tervalya-white);
+}
+
+.tervalya-hero-content > p {
+  max-width: 540px;
+  margin: 0;
+
+  color: #9eafb7;
+  font-size: 15px;
+}
+
+.tervalya-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.tervalya-primary-button {
+  min-height: 52px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: 1px solid var(--tervalya-accent);
+  border-radius: 5px;
+
+  background: var(--tervalya-accent);
+  color: #06120f !important;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  transition: 0.3s;
+}
+
+.tervalya-primary-button:hover {
+  transform: translateY(-4px);
+  background: var(--tervalya-accent-light);
+  box-shadow: 0 12px 35px rgba(57,214,189,0.2);
+}
+
+.tervalya-button-arrow {
+  font-size: 17px;
+}
+
+.tervalya-outline-button {
+  min-height: 52px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 5px;
+
+  color: var(--tervalya-white) !important;
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.tervalya-outline-button:hover {
+  border-color: var(--tervalya-accent);
+  color: var(--tervalya-accent) !important;
+  transform: translateY(-3px);
+}
+
+.tervalya-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 35px;
+}
+
+.tervalya-tags span {
+  padding: 8px 13px;
+
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 3px;
+
+  color: #9eafb7;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   HERO VISUAL
+===================================================== */
+
+.tervalya-hero-visual {
+  position: relative;
+  min-height: 440px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tervalya-orbit {
+  position: absolute;
+  border: 1px solid rgba(57,214,189,0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tervalya-orbit-one {
+  width: 470px;
+  height: 470px;
+  animation: tervalyaRotate 35s linear infinite;
+}
+
+.tervalya-orbit-two {
+  width: 350px;
+  height: 350px;
+  border-style: dashed;
+  animation: tervalyaRotate 45s linear infinite reverse;
+}
+
+.tervalya-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+  background: rgba(57,214,189,0.16);
+  filter: blur(90px);
+}
+
+.tervalya-hero-image {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 500px;
+  padding: 12px;
+
+  border: 1px solid rgba(57,214,189,0.25);
+  border-radius: 13px;
+
+  background: rgba(17,28,36,0.85);
+  box-shadow: 0 30px 100px rgba(0,0,0,0.5);
+
+  transform: rotate(-2deg);
+  transition: 0.5s;
+}
+
+.tervalya-hero-image:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.tervalya-hero-image img {
+  width: 100%;
+  border-radius: 7px;
+  object-fit: contain;
+}
+
+.tervalya-floating-card {
+  position: absolute;
+  z-index: 4;
+  right: -5px;
+  bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 17px 20px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 8px;
+
+  background: #14232b;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+}
+
+.tervalya-floating-icon {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: rgba(57,214,189,0.15);
+  color: var(--tervalya-accent);
+
+  font-size: 18px;
+}
+
+.tervalya-floating-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tervalya-floating-card strong {
+  font-size: 11px;
+}
+
+.tervalya-floating-card small {
+  color: var(--tervalya-muted);
+  font-size: 10px;
+}
+
+.tervalya-decoration {
+  position: absolute;
+  color: var(--tervalya-accent);
+}
+
+.tervalya-decoration-one {
+  top: 35px;
+  right: 50px;
+  font-size: 30px;
+}
+
+.tervalya-decoration-two {
+  bottom: 55px;
+  left: 10px;
+  font-size: 24px;
+}
+
+.tervalya-decoration-three {
+  top: 100px;
+  left: 15px;
+  font-size: 28px;
+}
+
+.tervalya-hero-bottom {
+  position: absolute;
+  right: 9%;
+  bottom: 30px;
+  left: 9%;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #71828b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* =====================================================
+   MÉTRICAS
+===================================================== */
+
+.tervalya-metrics {
+  padding: 35px 9%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+
+  border-top: 1px solid var(--tervalya-border);
+  border-bottom: 1px solid var(--tervalya-border);
+
+  background: #0d171d;
+}
+
+.tervalya-metrics div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding-left: 22px;
+  border-left: 2px solid var(--tervalya-accent);
+}
+
+.tervalya-metrics strong {
+  color: var(--tervalya-white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 23px;
+}
+
+.tervalya-metrics span {
+  color: var(--tervalya-muted);
+  font-size: 11px;
+}
+
+/* =====================================================
+   SEÇÕES GERAIS
+===================================================== */
+
+.tervalya-section {
+  padding: 110px 9%;
+}
+
+.tervalya-section-heading {
+  max-width: 800px;
+  margin-bottom: 55px;
+}
+
+.tervalya-section-heading > span {
+  color: var(--tervalya-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-section-heading h2 {
+  margin: 20px 0;
+
+  color: var(--tervalya-white);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.tervalya-section-heading h2 strong {
+  color: var(--tervalya-accent);
+}
+
+.tervalya-section-heading p {
+  max-width: 620px;
+  margin: 0;
+
+  color: var(--tervalya-muted);
+  font-size: 14px;
+}
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.tervalya-about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.tervalya-about-text p {
+  margin: 0 0 22px;
+  color: #a7b5bc;
+  font-size: 14px;
+}
+
+.tervalya-about-highlight {
+  position: relative;
+  padding: 45px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 10px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(57,214,189,0.12),
+      transparent 55%
+    ),
+    var(--tervalya-card);
+}
+
+.tervalya-highlight-symbol {
+  margin-bottom: 25px;
+  color: var(--tervalya-accent);
+  font-size: 36px;
+}
+
+.tervalya-about-highlight > span {
+  color: var(--tervalya-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-about-highlight h3 {
+  margin: 20px 0 30px;
+
+  color: white;
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+.tervalya-highlight-line {
+  width: 65px;
+  height: 3px;
+  background: var(--tervalya-accent);
+}
+
+/* =====================================================
+   VISÃO DA PLATAFORMA
+===================================================== */
+
+.tervalya-platform-section {
+  padding: 100px 9%;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 65px;
+
+  background: #0d171d;
+}
+
+.tervalya-platform-content > span {
+  color: var(--tervalya-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-platform-content h2 {
+  margin: 20px 0;
+
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.2;
+}
+
+.tervalya-platform-content h2 strong {
+  display: block;
+  color: var(--tervalya-accent);
+}
+
+.tervalya-platform-content p {
+  color: var(--tervalya-muted);
+  font-size: 14px;
+}
+
+.tervalya-platform-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 28px;
+}
+
+.tervalya-platform-tags span {
+  padding: 9px 12px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 4px;
+
+  color: var(--tervalya-accent-light);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tervalya-platform-art {
+  position: relative;
+  padding: 25px;
+}
+
+.tervalya-platform-glow {
+  position: absolute;
+  inset: 15%;
+
+  border-radius: 50%;
+  background: rgba(57,214,189,0.18);
+  filter: blur(80px);
+}
+
+.tervalya-platform-art img {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  border: 1px solid rgba(57,214,189,0.2);
+  border-radius: 10px;
+
+  box-shadow: 0 25px 80px rgba(0,0,0,0.45);
+}
+
+.tervalya-platform-caption {
+  display: block;
+  margin-top: 17px;
+
+  color: var(--tervalya-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+/* =====================================================
+   FUNCIONALIDADES
+===================================================== */
+
+.tervalya-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.tervalya-feature-card {
+  position: relative;
+  min-height: 240px;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 8px;
+
+  background: var(--tervalya-card);
+  transition: 0.35s;
+  overflow: hidden;
+}
+
+.tervalya-feature-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(57,214,189,0.55);
+
+  background: var(--tervalya-card-light);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.tervalya-feature-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tervalya-feature-number {
+  color: var(--tervalya-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tervalya-feature-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 7px;
+  background: rgba(57,214,189,0.1);
+  color: var(--tervalya-accent);
+
+  font-size: 22px;
+}
+
+.tervalya-feature-card h3 {
+  margin: 28px 0 10px;
+  font-size: 18px;
+}
+
+.tervalya-feature-card p {
+  margin: 0 0 20px;
+  color: var(--tervalya-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.tervalya-feature-line {
+  width: 35px;
+  height: 2px;
+  margin-top: auto;
+
+  background: var(--tervalya-accent);
+  transition: 0.3s;
+}
+
+.tervalya-feature-card:hover .tervalya-feature-line {
+  width: 75px;
+}
+
+/* =====================================================
+   DESENVOLVIMENTO
+===================================================== */
+
+.tervalya-development-section {
+  padding: 110px 9%;
+
+  background: #0d171d;
+}
+
+.tervalya-development-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+}
+
+.tervalya-development-label {
+  color: var(--tervalya-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-development-intro h3 {
+  margin: 22px 0;
+
+  font-size: 29px;
+  line-height: 1.4;
+}
+
+.tervalya-development-intro > p {
+  color: var(--tervalya-muted);
+  font-size: 13px;
+}
+
+.tervalya-engine-card {
+  margin-top: 35px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 8px;
+
+  background: var(--tervalya-card);
+}
+
+.tervalya-engine-card span {
+  color: var(--tervalya-muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-engine-card strong {
+  color: var(--tervalya-accent);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+}
+
+.tervalya-engine-card small {
+  color: #9babb2;
+  font-size: 11px;
+}
+
+.tervalya-development-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.tervalya-development-item {
+  min-height: 67px;
+  padding: 15px 0;
+
+  display: grid;
+  grid-template-columns: 45px 1fr 25px;
+  align-items: center;
+  gap: 15px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.tervalya-development-item:hover {
+  padding-left: 10px;
+}
+
+.tervalya-development-item > span:first-child {
+  color: var(--tervalya-accent);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tervalya-development-item p {
+  margin: 0;
+  color: #c2cdd2;
+  font-size: 12px;
+}
+
+.tervalya-step-arrow {
+  color: var(--tervalya-muted);
+  text-align: right;
+}
+
+/* =====================================================
+   TECNOLOGIAS
+===================================================== */
+
+.tervalya-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.tervalya-tech-card {
+  min-height: 190px;
+  padding: 25px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 8px;
+
+  background: var(--tervalya-card);
+  transition: 0.3s;
+}
+
+.tervalya-tech-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--tervalya-accent);
+  background: var(--tervalya-card-light);
+}
+
+.tervalya-tech-icon {
+  width: 43px;
+  height: 43px;
+  margin-bottom: 20px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 8px;
+  background: rgba(57,214,189,0.1);
+
+  color: var(--tervalya-accent);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.tervalya-tech-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.tervalya-tech-card p {
+  margin: 0;
+  color: var(--tervalya-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   ARQUITETURA
+===================================================== */
+
+.tervalya-architecture-section {
+  padding: 110px 9%;
+
+  background: #0d171d;
+}
+
+.tervalya-architecture {
+  max-width: 850px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tervalya-architecture-main,
+.tervalya-architecture-middle,
+.tervalya-architecture-result {
+  width: 100%;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 8px;
+
+  background: var(--tervalya-card);
+  text-align: center;
+}
+
+.tervalya-architecture-main {
+  border-color: rgba(57,214,189,0.45);
+  background: linear-gradient(
+    120deg,
+    rgba(57,214,189,0.1),
+    var(--tervalya-card)
+  );
+}
+
+.tervalya-architecture-main > span,
+.tervalya-architecture-middle > span,
+.tervalya-architecture-result > span {
+  color: var(--tervalya-accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-architecture-main strong,
+.tervalya-architecture-middle strong,
+.tervalya-architecture-result strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 21px;
+}
+
+.tervalya-architecture-main small,
+.tervalya-architecture-middle small,
+.tervalya-architecture-result small {
+  color: var(--tervalya-muted);
+  font-size: 11px;
+}
+
+.tervalya-architecture-connector {
+  height: 55px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--tervalya-accent);
+  font-size: 25px;
+}
+
+.tervalya-architecture-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.tervalya-architecture-grid > div {
+  min-height: 135px;
+  padding: 22px 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 8px;
+
+  background: var(--tervalya-card);
+  text-align: center;
+}
+
+.tervalya-architecture-grid span {
+  color: var(--tervalya-accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.tervalya-architecture-grid strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
+}
+
+.tervalya-architecture-grid small {
+  color: var(--tervalya-muted);
+  font-size: 10px;
+}
+
+.tervalya-architecture-result {
+  border-color: rgba(57,214,189,0.4);
+  background: rgba(57,214,189,0.06);
+}
+
+.tervalya-architecture-note {
+  margin-top: 25px;
+  color: var(--tervalya-muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+/* =====================================================
+   SEGURANÇA
+===================================================== */
+
+.tervalya-security-section {
+  padding: 110px 9%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.tervalya-security-content > span {
+  color: var(--tervalya-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-security-content h2 {
+  margin: 20px 0;
+
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.25;
+}
+
+.tervalya-security-content h2 strong {
+  display: block;
+  color: var(--tervalya-accent);
+}
+
+.tervalya-security-content > p {
+  color: var(--tervalya-muted);
+  font-size: 13px;
+}
+
+.tervalya-security-items {
+  margin-top: 35px;
+}
+
+.tervalya-security-items > div {
+  padding: 17px 0;
+
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  gap: 5px 15px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.tervalya-security-items > div > span {
+  grid-row: span 2;
+  color: var(--tervalya-accent);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tervalya-security-items strong {
+  font-size: 13px;
+}
+
+.tervalya-security-items small {
+  color: var(--tervalya-muted);
+  font-size: 11px;
+}
+
+.tervalya-security-visual {
+  position: relative;
+  min-height: 370px;
+
+  display: grid;
+  place-items: center;
+}
+
+.tervalya-security-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+  background: rgba(57,214,189,0.15);
+  filter: blur(90px);
+}
+
+.tervalya-security-card {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+
+  border: 1px solid rgba(57,214,189,0.25);
+  border-radius: 12px;
+
+  background: linear-gradient(145deg, #172830, #0d171d);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+}
+
+.tervalya-security-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-security-status {
+  color: var(--tervalya-accent);
+  font-size: 9px;
+}
+
+.tervalya-security-lock {
+  width: 75px;
+  height: 75px;
+  margin: 45px auto 25px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(57,214,189,0.4);
+  border-radius: 50%;
+
+  background: rgba(57,214,189,0.1);
+  color: var(--tervalya-accent);
+
+  font-size: 45px;
+}
+
+.tervalya-security-card h3 {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.tervalya-security-card > p {
+  color: var(--tervalya-muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.tervalya-security-line {
+  height: 4px;
+  margin: 25px 0;
+
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+
+.tervalya-security-line span {
+  display: block;
+  width: 75%;
+  height: 100%;
+
+  border-radius: 10px;
+  background: var(--tervalya-accent);
+}
+
+.tervalya-security-footer {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--tervalya-accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.tervalya-gallery-section {
+  background: #0d171d;
+}
+
+.tervalya-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.tervalya-gallery-card {
+  min-width: 0;
+}
+
+.tervalya-gallery-image {
+  position: relative;
+  min-height: 250px;
+
+  aspect-ratio: 16 / 10;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 9px;
+
+  background: #111c24;
+  overflow: hidden;
+}
+
+.tervalya-gallery-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+
+  object-fit: cover;
+  object-position: top center;
+
+  transition: transform 0.5s;
+}
+
+.tervalya-gallery-card:hover .tervalya-gallery-image img {
+  transform: scale(1.045);
+}
+
+.tervalya-gallery-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+
+  background: rgba(8,13,18,0.85);
+  color: var(--tervalya-accent);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tervalya-gallery-overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  padding: 45px 20px 18px;
+
+  background: linear-gradient(
+    transparent,
+    rgba(5,12,15,0.95)
+  );
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.tervalya-gallery-card:hover .tervalya-gallery-overlay {
+  opacity: 1;
+}
+
+.tervalya-gallery-overlay span {
+  color: var(--tervalya-accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.tervalya-gallery-overlay h3 {
+  margin: 8px 0 0;
+  font-size: 20px;
+}
+
+.tervalya-gallery-caption {
+  padding: 18px 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.tervalya-gallery-caption h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+}
+
+.tervalya-gallery-caption p {
+  margin: 0;
+  color: var(--tervalya-muted);
+  font-size: 11px;
+}
+
+.tervalya-gallery-caption > span {
+  color: var(--tervalya-accent);
+  font-size: 22px;
+}
+
+.tervalya-gallery-footer {
+  margin-top: 55px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  border-top: 1px solid var(--tervalya-border);
+}
+
+.tervalya-gallery-footer span {
+  color: var(--tervalya-accent);
+  font-size: 20px;
+}
+
+.tervalya-gallery-footer p {
+  margin: 0;
+  color: var(--tervalya-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =====================================================
+   RESULTADO
+===================================================== */
+
+.tervalya-result-section {
+  position: relative;
+  padding: 110px 9%;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(12,35,37,0.8),
+      rgba(8,13,18,0.95)
+    );
+
+  overflow: hidden;
+}
+
+.tervalya-result-glow {
+  position: absolute;
+  top: -150px;
+  right: -100px;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+  background: rgba(57,214,189,0.12);
+  filter: blur(100px);
+}
+
+.tervalya-result-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.tervalya-result-content > span {
+  color: var(--tervalya-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-result-content h2 {
+  margin: 22px 0;
+
+  font-size: clamp(35px, 5vw, 57px);
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.tervalya-result-content h2 strong {
+  display: block;
+  color: var(--tervalya-accent);
+}
+
+.tervalya-result-content > p {
+  max-width: 700px;
+  color: #a6b5bb;
+  font-size: 14px;
+}
+
+.tervalya-result-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.tervalya-result-badges span {
+  padding: 10px 13px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 4px;
+
+  background: rgba(57,214,189,0.06);
+  color: var(--tervalya-accent-light);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   CONCLUSÃO
+===================================================== */
+
+.tervalya-conclusion {
+  padding: 110px 9%;
+  text-align: center;
+}
+
+.tervalya-conclusion > span {
+  color: var(--tervalya-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tervalya-conclusion h2 {
+  max-width: 800px;
+  margin: 25px auto;
+
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.tervalya-conclusion h2 strong {
+  display: block;
+  color: var(--tervalya-accent);
+}
+
+.tervalya-conclusion > p {
+  max-width: 690px;
+  margin: 0 auto;
+
+  color: var(--tervalya-muted);
+  font-size: 14px;
+}
+
+.tervalya-signature {
+  margin: 45px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tervalya-signature span {
+  color: var(--tervalya-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.tervalya-signature strong {
+  color: var(--tervalya-accent);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.tervalya-back-bottom {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 22px;
+
+  border: 1px solid var(--tervalya-border);
+  border-radius: 5px;
+
+  color: var(--tervalya-white) !important;
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.tervalya-back-bottom:hover {
+  border-color: var(--tervalya-accent);
+  color: var(--tervalya-accent) !important;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.tervalya-footer {
+  min-height: 80px;
+  padding: 20px 9%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-top: 1px solid var(--tervalya-border);
+  background: #060a0e;
+}
+
+.tervalya-footer span {
+  color: var(--tervalya-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.tervalya-footer a {
+  color: var(--tervalya-accent);
+  font-size: 11px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.tervalya-footer a:hover {
+  color: var(--tervalya-accent-light);
+}
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes tervalyaRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media (max-width: 1050px) {
+  .tervalya-hero {
+    padding-right: 6%;
+    padding-left: 6%;
+    gap: 30px;
+  }
+
+  .tervalya-section,
+  .tervalya-platform-section,
+  .tervalya-development-section,
+  .tervalya-security-section,
+  .tervalya-result-section,
+  .tervalya-conclusion,
+  .tervalya-architecture-section {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .tervalya-nav {
+    padding: 0 6%;
+  }
+
+  .tervalya-hero h1 {
+    font-size: 65px;
+  }
+
+  .tervalya-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tervalya-tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tervalya-about-grid,
+  .tervalya-development-grid,
+  .tervalya-security-section {
+    gap: 40px;
+  }
+
+  .tervalya-floating-card {
+    right: -10px;
+  }
+}
+
+/* =====================================================
+   CELULARES E TABLETS PEQUENOS
+===================================================== */
+
+@media (max-width: 700px) {
+  .tervalya-nav {
+    position: relative;
+    min-height: 75px;
+    padding: 12px 5%;
+  }
+
+  .tervalya-back {
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .tervalya-back span {
+    font-size: 17px;
+  }
+
+  .tervalya-brand {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+
+  .tervalya-brand small {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .tervalya-nav-link {
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .tervalya-hero {
+    min-height: auto;
+    padding: 75px 6% 85px;
+
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .tervalya-hero-content {
+    text-align: center;
+  }
+
+  .tervalya-eyebrow {
+    justify-content: center;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .tervalya-hero h1 {
+    font-size: clamp(43px, 11vw, 65px);
+    letter-spacing: -3px;
+  }
+
+  .tervalya-hero h2 {
+    font-size: 19px;
+  }
+
+  .tervalya-hero-content > p {
+    margin: 0 auto;
+    font-size: 13px;
+  }
+
+  .tervalya-hero-actions {
+    justify-content: center;
+  }
+
+  .tervalya-tags {
+    justify-content: center;
+  }
+
+  .tervalya-hero-visual {
+    min-height: 340px;
+  }
+
+  .tervalya-orbit-one {
+    width: 340px;
+    height: 340px;
+  }
+
+  .tervalya-orbit-two {
+    width: 270px;
+    height: 270px;
+  }
+
+  .tervalya-hero-image {
+    width: 88%;
+  }
+
+  .tervalya-floating-card {
+    right: 0;
+    bottom: 5px;
+    padding: 12px;
+  }
+
+  .tervalya-floating-card strong {
+    font-size: 9px;
+  }
+
+  .tervalya-floating-card small {
+    font-size: 8px;
+  }
+
+  .tervalya-hero-bottom {
+    right: 6%;
+    left: 6%;
+    bottom: 20px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .tervalya-metrics {
+    padding: 30px 6%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 15px;
+  }
+
+  .tervalya-metrics div {
+    padding-left: 12px;
+  }
+
+  .tervalya-metrics strong {
+    font-size: 19px;
+  }
+
+  .tervalya-metrics span {
+    font-size: 9px;
+  }
+
+  .tervalya-section,
+  .tervalya-platform-section,
+  .tervalya-development-section,
+  .tervalya-security-section,
+  .tervalya-result-section,
+  .tervalya-conclusion,
+  .tervalya-architecture-section {
+    padding: 75px 6%;
+  }
+
+  .tervalya-section-heading {
+    margin-bottom: 35px;
+  }
+
+  .tervalya-section-heading h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .tervalya-section-heading p {
+    font-size: 12px;
+  }
+
+  .tervalya-about-grid,
+  .tervalya-platform-section,
+  .tervalya-development-grid,
+  .tervalya-security-section {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .tervalya-about-text p {
+    font-size: 12px;
+  }
+
+  .tervalya-about-highlight {
+    padding: 30px;
+  }
+
+  .tervalya-about-highlight h3 {
+    font-size: 21px;
+  }
+
+  .tervalya-platform-content h2 {
+    font-size: 34px;
+  }
+
+  .tervalya-platform-art {
+    padding: 5px;
+  }
+
+  .tervalya-features-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .tervalya-feature-card {
+    min-height: 205px;
+    padding: 23px;
+  }
+
+  .tervalya-feature-card h3 {
+    font-size: 17px;
+  }
+
+  .tervalya-feature-card p {
+    font-size: 11px;
+  }
+
+  .tervalya-development-intro h3 {
+    font-size: 24px;
+  }
+
+  .tervalya-development-item {
+    grid-template-columns: 30px 1fr 18px;
+    gap: 10px;
+  }
+
+  .tervalya-development-item p {
+    font-size: 11px;
+  }
+
+  .tervalya-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .tervalya-tech-card {
+    min-height: 175px;
+    padding: 17px;
+  }
+
+  .tervalya-tech-card h3 {
+    font-size: 14px;
+  }
+
+  .tervalya-tech-card p {
+    font-size: 10px;
+  }
+
+  .tervalya-architecture-main,
+  .tervalya-architecture-middle,
+  .tervalya-architecture-result {
+    padding: 22px 12px;
+  }
+
+  .tervalya-architecture-main strong,
+  .tervalya-architecture-middle strong,
+  .tervalya-architecture-result strong {
+    font-size: 16px;
+  }
+
+  .tervalya-architecture-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tervalya-architecture-grid > div {
+    min-height: 110px;
+  }
+
+  .tervalya-security-visual {
+    min-height: 330px;
+  }
+
+  .tervalya-security-card {
+    padding: 23px;
+  }
+
+  .tervalya-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tervalya-gallery-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .tervalya-gallery-overlay {
+    opacity: 1;
+  }
+
+  .tervalya-gallery-footer {
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .tervalya-gallery-footer p {
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .tervalya-result-content h2 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .tervalya-result-content > p {
+    font-size: 12px;
+  }
+
+  .tervalya-result-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tervalya-conclusion h2 {
+    font-size: 34px;
+  }
+
+  .tervalya-conclusion > p {
+    font-size: 12px;
+  }
+
+  .tervalya-footer {
+    padding: 25px 6%;
+
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+===================================================== */
+
+@media (max-width: 380px) {
+  .tervalya-nav {
+    padding: 10px 3%;
+  }
+
+  .tervalya-back {
+    font-size: 9px;
+  }
+
+  .tervalya-brand {
+    font-size: 14px;
+  }
+
+  .tervalya-nav-link {
+    padding: 8px;
+    font-size: 8px;
+  }
+
+  .tervalya-hero h1 {
+    font-size: 42px;
+  }
+
+  .tervalya-hero-actions {
+    flex-direction: column;
+  }
+
+  .tervalya-primary-button,
+  .tervalya-outline-button {
+    width: 100%;
+  }
+
+  .tervalya-tags span {
+    font-size: 8px;
+  }
+
+  .tervalya-metrics strong {
+    font-size: 17px;
+  }
+
+  .tervalya-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tervalya-result-content h2 {
+    font-size: 31px;
+  }
+}
+
+/* =====================================================
+   ACESSIBILIDADE
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .tervalya-case *,
+  .tervalya-case *::before,
+  .tervalya-case *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
