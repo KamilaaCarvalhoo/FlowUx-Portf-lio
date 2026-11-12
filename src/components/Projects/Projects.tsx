@@ -24,26 +24,29 @@ function Projects() {
         "Integração com banco de dados PostgreSQL",
       ],
     },
+
     {
       name: "Kiva Drive",
-      category: "Aplicativo de Mobilidade",
+      category: "Plataforma de Mobilidade Urbana",
       description:
-        "Plataforma de mobilidade desenvolvida para conectar mulheres passageiras e motoristas, proporcionando uma experiência digital voltada para mobilidade feminina.",
+        "Plataforma de mobilidade feminina desenvolvida do zero, conectando passageiras e motoristas por meio de dois ambientes mobile integrados.",
       technology:
-        "React Native • Expo • Supabase • Android/iOS • Meta Events Manager",
+        "React Native • Expo • Supabase • PIX • Android/iOS",
       image: "/kiva-drive.png",
       link: "https://kivadriveoficial.com.br",
+      caseStudy: "/projetos/kiva-drive",
       platform: "Android / iOS",
-      status: "Publicado e funcionando",
-      audience: "Passageiras e motoristas mulheres",
+      status: "Publicado na Google Play e App Store",
+      audience: "Passageiras e motoristas",
       features: [
-        "Cadastro de passageiras",
-        "Cadastro de motoristas",
-        "Solicitação de viagens",
-        "Experiência de mobilidade feminina",
-        "Sistema conectado a banco de dados",
+        "Cadastro e autenticação de usuárias",
+        "Aplicativos para passageiras e motoristas",
+        "Solicitação e acompanhamento de viagens",
+        "Integração com backend e banco de dados",
+        "Integração de pagamentos via PIX",
       ],
     },
+
     {
       name: "Ryllo",
       category: "Game Mobile",
@@ -63,6 +66,7 @@ function Projects() {
         "Sistema de combate",
       ],
     },
+
     {
       name: "Pandily",
       category: "Aplicativo Educacional",
@@ -121,6 +125,12 @@ function Projects() {
                   FULL STACK
                 </span>
               )}
+
+              {project.name === "Kiva Drive" && (
+                <span className="project-featured-label">
+                  FULL STACK MOBILE
+                </span>
+              )}
             </div>
 
             <div className="project-content">
@@ -174,24 +184,35 @@ function Projects() {
                 </div>
               </div>
 
-              {project.link !== "#" ? (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-button"
-                >
-                  Conhecer projeto →
-                </a>
-              ) : (
-                <button
-                  className="project-button"
-                  type="button"
-                  disabled
-                >
-                  Em breve →
-                </button>
-              )}
+              <div className="project-buttons">
+                {project.link !== "#" ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-button"
+                  >
+                    Conhecer projeto →
+                  </a>
+                ) : (
+                  <button
+                    className="project-button"
+                    type="button"
+                    disabled
+                  >
+                    Em breve →
+                  </button>
+                )}
+
+                {project.caseStudy && (
+                  <a
+                    href={project.caseStudy}
+                    className="project-button project-button-secondary"
+                  >
+                    Ver estudo de caso →
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}
