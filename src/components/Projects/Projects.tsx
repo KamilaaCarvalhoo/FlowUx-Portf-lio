@@ -9,7 +9,7 @@ function Projects() {
       technology:
         "React • TypeScript • Node.js • Express • PostgreSQL • Prisma • JWT",
       image: "/tervalya-crm.png",
-      link: "https://frontend-virid-eight-d2jh6pxheb.vercel.app/login",
+      link: "frontend-virid-eight-d2jh6pxheb.vercel.app",
       platform: "Web • SaaS",
       status: "Publicado e funcionando",
       audience: "Empresas e equipes comerciais",
