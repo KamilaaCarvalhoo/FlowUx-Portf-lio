@@ -51,7 +51,7 @@ function KivaDriveCaseStudy() {
   return (
     <main className="kiva-case">
 
-      {/* NAVEGAÇÃO */}
+     
 
       <nav className="kiva-nav">
         <a href="/#projetos" className="kiva-back">
@@ -72,7 +72,6 @@ function KivaDriveCaseStudy() {
         </a>
       </nav>
 
-      {/* HERO */}
 
       <section className="kiva-hero">
 
@@ -144,7 +143,7 @@ function KivaDriveCaseStudy() {
 
       </section>
 
-      {/* INDICADORES */}
+
 
       <section className="kiva-metrics">
         <div>
@@ -168,7 +167,6 @@ function KivaDriveCaseStudy() {
         </div>
       </section>
 
-      {/* SOBRE */}
 
       <section className="kiva-section" id="sobre">
 
@@ -208,7 +206,8 @@ function KivaDriveCaseStudy() {
         </div>
       </section>
 
-      {/* DESAFIO E SOLUÇÃO */}
+      
+    
 
       <section className="kiva-section kiva-challenge-section">
 
@@ -259,7 +258,7 @@ function KivaDriveCaseStudy() {
         </div>
       </section>
 
-      {/* FUNCIONALIDADES */}
+    
 
       <section className="kiva-section">
 
@@ -320,7 +319,7 @@ function KivaDriveCaseStudy() {
         </div>
       </section>
 
-      {/* MINHA ATUAÇÃO */}
+  
 
       <section className="kiva-section kiva-role-section">
 
@@ -372,8 +371,7 @@ function KivaDriveCaseStudy() {
         </div>
       </section>
 
-      {/* ARQUITETURA */}
-
+      
       <section className="kiva-section">
 
         <div className="kiva-section-heading">

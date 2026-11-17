@@ -27,7 +27,6 @@ function Projects() {
         "Integração com banco de dados PostgreSQL",
       ],
     },
-
     {
       name: "Kiva Drive",
       category: "Plataforma de Mobilidade Urbana",
@@ -49,7 +48,6 @@ function Projects() {
         "Integração de pagamentos via PIX",
       ],
     },
-
     {
       name: "Ryllo",
       category: "Game Mobile",
@@ -70,7 +68,6 @@ function Projects() {
         "Sistema de combate",
       ],
     },
-
     {
       name: "Pandily",
       category: "Aplicativo Educacional",
@@ -89,21 +86,43 @@ function Projects() {
         "Experiência gamificada",
       ],
     },
+    {
+      name: "Zinho",
+      category: "Assistente Virtual para Desktop",
+      description:
+        "Um robozinho virtual para desktop que deixa o computador mais divertido e produtivo. Interage com o usuário, oferece atalhos para sites e programas do Windows e permite organizar tarefas com armazenamento local.",
+      technology: "React • JavaScript • Electron • Node.js • CSS",
+      image: "/zinho.png",
+      link: "https://github.com/KamilaaCarvalhoo/Zinho/releases/tag/v1.0.0",
+      caseStudy: "/projetos/zinho",
+      platform: "Windows • Desktop",
+      status: "Disponível para download",
+      audience: "Usuários de computador",
+      features: [
+        "Mascote virtual animado e interativo",
+        "Atalhos para sites e programas do Windows",
+        "Relógio e calendário em tempo real",
+        "Lista de tarefas com conclusão e exclusão",
+        "Armazenamento local persistente",
+        "Comunicação entre React e Electron via IPC",
+      ],
+    },
   ];
 
   return (
     <section className="projects-section" id="projetos">
-      <div className="section-title">
-        <span>✦ PROJETOS</span>
+      <div className="section-header">
+        <div className="section-badge">
+          <span>✦ PORTFÓLIO</span>
+        </div>
 
         <h2>
-          Ideias que
-          <strong> se tornaram realidade.</strong>
+          Ideias que se tornaram
+          <span className="gradient-text"> realidade digital.</span>
         </h2>
 
         <p>
-          Conheça alguns dos produtos digitais desenvolvidos
-          pela FlowUx.
+          Explore os projetos e produtos tecnológicos desenvolvidos por Kamila Carvalho.
         </p>
       </div>
 
@@ -117,113 +136,127 @@ function Projects() {
             }`}
             key={project.name}
           >
-            {/* IMAGEM DO PROJETO */}
-            <div className="project-image">
+            <div className="project-image-wrapper">
               <img
                 src={project.image}
-                alt={`Projeto ${project.name}`}
+                alt={`Interface do projeto ${project.name}`}
                 loading="lazy"
               />
 
-              {project.name === "TERVALYA CRM" && (
-                <span className="project-featured-label">
-                  FULL STACK
-                </span>
-              )}
+              <div className="project-badges-overlay">
+                {project.name === "TERVALYA CRM" && (
+                  <span className="project-badge-tag highlight-tag">
+                    FULL STACK
+                  </span>
+                )}
 
-              {project.name === "Kiva Drive" && (
-                <span className="project-featured-label">
-                  FULL STACK MOBILE
-                </span>
-              )}
+                {project.name === "Kiva Drive" && (
+                  <span className="project-badge-tag highlight-tag">
+                    FULL STACK MOBILE
+                  </span>
+                )}
 
-              {project.name === "Ryllo" && (
-                <span className="project-featured-label">
-                  GAME DEVELOPMENT
-                </span>
-              )}
+                {project.name === "Ryllo" && (
+                  <span className="project-badge-tag highlight-tag">
+                    GAME DEV
+                  </span>
+                )}
+
+                {project.name === "Zinho" && (
+                  <span className="project-badge-tag highlight-tag">
+                    DESKTOP APP
+                  </span>
+                )}
+              </div>
             </div>
 
-            {/* CONTEÚDO */}
             <div className="project-content">
-              <span className="project-category">
-                {project.category}
-              </span>
+              <div className="project-meta-top">
+                <span className="project-category">
+                  {project.category}
+                </span>
+
+                <span className="project-status-dot">
+                  • {project.status}
+                </span>
+              </div>
 
               <h3>{project.name}</h3>
 
-              <p>{project.description}</p>
+              <p className="project-desc">
+                {project.description}
+              </p>
 
-              {/* INFORMAÇÕES */}
-              <div className="project-info">
+              <div className="project-info-grid">
                 <div className="project-info-item">
-                  <strong>Plataforma</strong>
-                  <span>{project.platform}</span>
+                  <span className="info-label">Plataforma</span>
+                  <span className="info-value">
+                    {project.platform}
+                  </span>
                 </div>
 
                 <div className="project-info-item">
-                  <strong>Status</strong>
-                  <span>{project.status}</span>
-                </div>
-
-                <div className="project-info-item">
-                  <strong>Público</strong>
-                  <span>{project.audience}</span>
+                  <span className="info-label">Público-alvo</span>
+                  <span className="info-value">
+                    {project.audience}
+                  </span>
                 </div>
               </div>
 
-              {/* FUNCIONALIDADES */}
               <div className="project-features">
-                <strong>Funcionalidades</strong>
+                <span className="features-title">
+                  Principais entregas:
+                </span>
 
                 <ul>
                   {project.features.map((feature) => (
                     <li key={feature}>
-                      <span>✦</span>
+                      <span className="feature-bullet">✦</span>
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* TECNOLOGIAS */}
               <div className="project-technologies">
-                <strong>Tecnologias e ferramentas</strong>
-
                 <div className="technology-tags">
                   {project.technology.split(" • ").map((tech) => (
-                    <span key={tech}>{tech}</span>
+                    <span className="tech-tag" key={tech}>
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>
 
-              {/* BOTÕES */}
               <div className="project-buttons">
                 {project.link !== "#" ? (
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="project-button"
+                    className="project-button primary-btn"
                   >
-                    Conhecer projeto →
+                    {project.name === "Zinho"
+                      ? "Baixar Zinho"
+                      : "Acessar projeto"}
+                    <span>{project.name === "Zinho" ? "↓" : "→"}</span>
                   </a>
                 ) : (
                   <button
-                    className="project-button"
+                    className="project-button disabled-btn"
                     type="button"
                     disabled
                   >
-                    Em breve →
+                    Em breve <span>⏳</span>
                   </button>
                 )}
 
                 {project.caseStudy && (
                   <Link
                     to={project.caseStudy}
-                    className="project-button project-button-secondary"
+                    className="project-button secondary-btn"
                   >
-                    Ver estudo de caso →
+                    Estudo de caso <span>↗</span>
                   </Link>
                 )}
               </div>

@@ -1,13 +1,8 @@
 function Navbar() {
   return (
     <nav className="navbar">
-
       <a href="#inicio" className="logo-link">
-       <img
-  src="/logo-flowux.png"
-  alt="FlowUx"
-  className="navbar-logo"
-/>
+        <span className="navbar-logo-text">Kamila Carvalho</span>
       </a>
 
       <div className="nav-links">
@@ -21,9 +16,8 @@ function Navbar() {
       <a href="#contato" className="nav-button">
         Vamos conversar
       </a>
-
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

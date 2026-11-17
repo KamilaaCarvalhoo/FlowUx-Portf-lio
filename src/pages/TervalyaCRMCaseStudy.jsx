@@ -112,7 +112,7 @@ export default function TervalyaCaseStudy() {
   return (
     <main className="tervalya-case" id="top">
 
-      {/* NAVEGAÇÃO */}
+    
 
       <nav className="tervalya-nav">
         <a href="/#projetos" className="tervalya-back">
@@ -134,7 +134,7 @@ export default function TervalyaCaseStudy() {
         </a>
       </nav>
 
-      {/* HERO */}
+
 
       <section className="tervalya-hero">
         <div className="tervalya-hero-content">
@@ -228,7 +228,6 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* INDICADORES */}
 
       <section className="tervalya-metrics">
         <div>
@@ -252,7 +251,7 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* SOBRE */}
+  
 
       <section className="tervalya-section" id="sobre">
         <div className="tervalya-section-heading">
@@ -303,7 +302,7 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* VISÃO DA PLATAFORMA */}
+    
 
       <section className="tervalya-platform-section">
         <div className="tervalya-platform-content">
@@ -345,7 +344,7 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* FUNCIONALIDADES */}
+   
 
       <section className="tervalya-section">
         <div className="tervalya-section-heading">
@@ -389,7 +388,7 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* DESENVOLVIMENTO */}
+   
 
       <section className="tervalya-development-section">
         <div className="tervalya-section-heading">
@@ -445,7 +444,6 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* TECNOLOGIAS */}
 
       <section className="tervalya-section">
         <div className="tervalya-section-heading">
@@ -480,7 +478,7 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* ARQUITETURA */}
+    
 
       <section className="tervalya-architecture-section">
         <div className="tervalya-section-heading">
@@ -557,7 +555,7 @@ export default function TervalyaCaseStudy() {
         </p>
       </section>
 
-      {/* SEGURANÇA E GESTÃO */}
+    
 
       <section className="tervalya-security-section">
         <div className="tervalya-security-content">
@@ -627,7 +625,7 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* GALERIA */}
+    
 
       <section className="tervalya-section tervalya-gallery-section">
         <div className="tervalya-section-heading">
@@ -685,8 +683,7 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* RESULTADO */}
-
+   
       <section className="tervalya-result-section">
         <div className="tervalya-result-glow" />
 
@@ -731,7 +728,7 @@ export default function TervalyaCaseStudy() {
         </div>
       </section>
 
-      {/* CONCLUSÃO */}
+   
 
       <section className="tervalya-conclusion">
         <span>10 / O QUE ESSE PROJETO REPRESENTA</span>
@@ -759,7 +756,7 @@ export default function TervalyaCaseStudy() {
         </a>
       </section>
 
-      {/* FOOTER */}
+    
 
       <footer className="tervalya-footer">
         <span>FLOWUX © 2026</span>

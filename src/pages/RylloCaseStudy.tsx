@@ -113,7 +113,7 @@ function RylloCaseStudy() {
   return (
     <main className="ryllo-case" id="top">
 
-      {/* NAVEGAÇÃO */}
+
 
       <nav className="ryllo-nav">
         <a href="/#projetos" className="ryllo-back">
@@ -135,7 +135,7 @@ function RylloCaseStudy() {
         </a>
       </nav>
 
-      {/* HERO */}
+      
 
       <section className="ryllo-hero">
         <div className="ryllo-hero-content">
@@ -217,7 +217,7 @@ function RylloCaseStudy() {
         </div>
       </section>
 
-      {/* INDICADORES */}
+    
 
       <section className="ryllo-metrics">
         <div>
@@ -241,7 +241,7 @@ function RylloCaseStudy() {
         </div>
       </section>
 
-      {/* SOBRE */}
+     
 
       <section className="ryllo-section" id="sobre">
         <div className="ryllo-section-heading">
@@ -288,7 +288,7 @@ function RylloCaseStudy() {
         </div>
       </section>
 
-      {/* UNIVERSO */}
+    
 
       <section className="ryllo-world-section">
         <div className="ryllo-world-content">
@@ -328,7 +328,7 @@ function RylloCaseStudy() {
         </div>
       </section>
 
-      {/* FUNCIONALIDADES */}
+   
 
       <section className="ryllo-section">
         <div className="ryllo-section-heading">

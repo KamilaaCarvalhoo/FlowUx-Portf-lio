@@ -31,7 +31,7 @@
   font-family: 'Space Grotesk', sans-serif;
 }
 
-/* NAVEGAÇÃO */
+
 
 .ryllo-nav {
   min-height: 82px;
@@ -84,7 +84,7 @@
   margin-top: 3px;
 }
 
-/* HERO */
+
 
 .ryllo-hero {
   min-height: 650px;
@@ -230,7 +230,7 @@
   background: rgba(212,175,55,.035);
 }
 
-/* HERO VISUAL */
+
 
 .ryllo-hero-visual {
   position: relative;
@@ -337,7 +337,7 @@
   }
 }
 
-/* CARD FLUTUANTE */
+
 
 .ryllo-floating-card {
   position: absolute;
@@ -429,7 +429,7 @@
   letter-spacing: 2px;
 }
 
-/* INDICADORES */
+
 
 .ryllo-metrics {
   padding: 40px 10%;
@@ -462,7 +462,7 @@
   font-size: 12px;
 }
 
-/* SEÇÕES */
+
 
 .ryllo-section {
   padding: 110px 10%;
@@ -499,7 +499,7 @@
   max-width: 570px;
 }
 
-/* SOBRE */
+
 
 .ryllo-about-grid {
   display: grid;
@@ -550,7 +550,7 @@
   border-radius: 5px;
 }
 
-/* UNIVERSO */
+
 
 .ryllo-world-section {
   padding: 100px 10%;
@@ -650,7 +650,7 @@
   text-shadow: 0 2px 10px rgba(0,0,0,.8);
 }
 
-/* FUNCIONALIDADES */
+
 
 .ryllo-features-grid {
   display: grid;
@@ -716,7 +716,7 @@
   width: 70px;
 }
 
-/* DESENVOLVIMENTO */
+
 
 .ryllo-development-section {
   padding: 110px 10%;
@@ -810,8 +810,6 @@
   color: var(--ryllo-gold-light);
 }
 
-/* TECNOLOGIAS */
-
 .ryllo-tech-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -858,7 +856,7 @@
   line-height: 1.8;
 }
 
-/* ARQUITETURA */
+
 
 .ryllo-architecture-section {
   padding: 110px 10%;
@@ -982,7 +980,7 @@
   text-align: center;
 }
 
-/* GALERIA GAMEPLAY */
+
 
 .ryllo-gallery-section {
   background: #0F0E0A;
@@ -1136,7 +1134,6 @@
   letter-spacing: 2px;
 }
 
-/* RESULTADO */
 
 .ryllo-result-section {
   position: relative;
@@ -1196,7 +1193,7 @@
   background: rgba(212,175,55,.04);
 }
 
-/* CONCLUSÃO */
+
 
 .ryllo-conclusion {
   padding: 120px 10%;
@@ -1248,7 +1245,7 @@
   border-color: white;
 }
 
-/* FOOTER */
+
 
 .ryllo-footer {
   padding: 30px 8%;
@@ -1271,7 +1268,7 @@
   color: var(--ryllo-gold-light);
 }
 
-/* RESPONSIVIDADE TABLET */
+
 
 @media (max-width: 900px) {
   .ryllo-hero {
@@ -1318,7 +1315,7 @@
   }
 }
 
-/* RESPONSIVIDADE MOBILE */
+
 
 @media (max-width: 600px) {
   .ryllo-nav {
@@ -1503,7 +1500,7 @@
   }
 }
 
-/* ACESSIBILIDADE */
+
 
 @media (prefers-reduced-motion: reduce) {
   .ryllo-case *,
