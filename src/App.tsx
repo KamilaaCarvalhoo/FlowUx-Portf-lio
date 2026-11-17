@@ -22,99 +22,31 @@ import TervalyaCRMCaseStudy from "./pages/TervalyaCRMCaseStudy";
 import ZinhoCaseStudy from "./pages/ZinhoCaseStudy";
 
 // ======================================================
-// SEÇÕES DA PÁGINA PRINCIPAL
+// HERO
 // ======================================================
 
 function HeroSection() {
   return (
-    <section
-      className="hero"
-      id="inicio"
-      style={{
-        minHeight: "90vh",
-        padding: "160px 8% 80px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        gap: "60px",
-        position: "relative",
-        overflow: "hidden"
-      }}
-    >
-      <div
-        className="hero-content"
-        style={{
-          maxWidth: "620px",
-          position: "relative",
-          zIndex: 2
-        }}
-      >
-        <span
-          className="hero-tag"
-          style={{
-            display: "inline-block",
-            marginBottom: "20px",
-            color: "#22D3EE",
-            fontSize: "13px",
-            fontWeight: 700,
-            letterSpacing: "2px"
-          }}
-        >
+    <section className="hero" id="inicio">
+      <div className="hero-content">
+        <span className="hero-tag">
           ✦ DESIGN • TECNOLOGIA • EXPERIÊNCIA
         </span>
 
-        <h1
-          style={{
-            fontSize: "clamp(38px, 4.5vw, 58px)",
-            lineHeight: "1.2",
-            fontWeight: 800,
-            color: "#E2E8F0",
-            margin: "0 0 24px 0"
-          }}
-        >
+        <h1>
           Transformando{" "}
-          <span
-            style={{
-              background: "linear-gradient(135deg, #22D3EE, #A855F7, #E83ECA)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              fontStyle: "normal"
-            }}
-          >
-            ideias
-          </span>{" "}
+          <span>ideias</span>{" "}
           em experiências{" "}
-          <span
-            style={{
-              background: "linear-gradient(135deg, #A855F7, #E83ECA, #22D3EE)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent"
-            }}
-          >
-            digitais.
-          </span>
+          <span>digitais.</span>
         </h1>
 
-        <p
-          style={{
-            fontSize: "19px",
-            color: "#94A3B8",
-            lineHeight: "1.75",
-            maxWidth: "580px",
-            margin: "0 0 35px 0",
-            fontWeight: 400
-          }}
-        >
-          Sou desenvolvedora e designer digital especializada na criação de produtos modernos, interfaces intuitivas e soluções completas para a web e mobile.
+        <p>
+          Sou desenvolvedora e designer digital especializada na criação
+          de produtos modernos, interfaces intuitivas e soluções completas
+          para a web e mobile.
         </p>
 
-        <div
-          className="hero-buttons"
-          style={{
-            display: "flex",
-            gap: "15px"
-          }}
-        >
+        <div className="hero-buttons">
           <a href="#projetos" className="primary-button">
             Ver projetos
           </a>
@@ -125,56 +57,13 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* FOTO DE PERFIL COM EFEITO 3D E NEON */}
-      <div
-        style={{
-          width: "430px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-          zIndex: 2
-        }}
-      >
-        {/* Glow de fundo */}
-        <div
-          style={{
-            position: "absolute",
-            width: "320px",
-            height: "380px",
-            borderRadius: "30px",
-            background: "linear-gradient(135deg, #7C3AED, #22D3EE)",
-            filter: "blur(50px)",
-            opacity: 0.4,
-            zIndex: 1
-          }}
-        />
+      <div className="hero-profile">
+        <div className="hero-glow"></div>
 
-        {/* Moldura e foto */}
-        <div
-          style={{
-            width: "100%",
-            maxWidth: "320px",
-            height: "400px",
-            borderRadius: "28px",
-            overflow: "hidden",
-            border: "2px solid rgba(34, 211, 238, 0.5)",
-            boxShadow: "0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(124, 58, 237, 0.4)",
-            background: "linear-gradient(135deg, #111633, #211033)",
-            position: "relative",
-            zIndex: 2,
-            transform: "perspective(1000px) rotateY(-4deg) rotateX(2deg)"
-          }}
-        >
+        <div className="hero-photo">
           <img
             src="/Perfil.jpeg"
-            alt="Kamila Carvalho"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              display: "block"
-            }}
+            alt="Foto de perfil de Kamila Carvalho"
           />
         </div>
       </div>
@@ -182,71 +71,37 @@ function HeroSection() {
   );
 }
 
+// ======================================================
+// SOBRE MIM
+// ======================================================
+
 function AboutSection() {
   return (
-    <section
-      className="about"
-      id="sobre"
-      style={{ padding: "100px 8%" }}
-    >
-      <div
-        className="about-container"
-        style={{
-          gridTemplateColumns: "1fr",
-          maxWidth: "900px",
-          margin: "0 auto",
-          textAlign: "center"
-        }}
-      >
-        <div
-          className="about-content"
-          style={{ margin: "0 auto" }}
-        >
+    <section className="about" id="sobre">
+      <div className="about-container">
+        <div className="about-content">
           <span className="about-tag">
             ✦ SOBRE MIM
           </span>
 
-          <h2
-            style={{
-              fontSize: "clamp(32px, 4vw, 48px)",
-              marginBottom: "24px"
-            }}
-          >
+          <h2>
             Criando experiências digitais que conectam
             <span> criatividade e tecnologia.</span>
           </h2>
 
-          <p
-            style={{
-              fontSize: "17px",
-              lineHeight: "1.8",
-              color: "#aeb2c7",
-              marginBottom: "16px"
-            }}
-          >
-            Desenvolvo aplicativos, jogos, websites e sistemas, unindo código limpo,
-            design refinado e excelente experiência do usuário para transformar conceitos em realidade.
+          <p>
+            Desenvolvo aplicativos, jogos, websites e sistemas,
+            unindo código limpo, design refinado e excelente
+            experiência do usuário para transformar conceitos em realidade.
           </p>
 
-          <p
-            style={{
-              fontSize: "17px",
-              lineHeight: "1.8",
-              color: "#aeb2c7"
-            }}
-          >
+          <p>
             Do planejamento à entrega final, meu foco é construir
             soluções digitais marcantes, funcionais e preparadas para o mercado.
           </p>
         </div>
 
-        <div
-          className="about-highlights"
-          style={{
-            gridTemplateColumns: "repeat(4, 1fr)",
-            marginTop: "40px"
-          }}
-        >
+        <div className="about-highlights">
           <div className="about-card">
             <strong>03</strong>
             <span>Produtos em destaque</span>
@@ -271,6 +126,10 @@ function AboutSection() {
     </section>
   );
 }
+
+// ======================================================
+// SERVIÇOS
+// ======================================================
 
 function ServicesSection() {
   const servicesList = [
@@ -310,9 +169,11 @@ function ServicesSection() {
     <section className="services" id="servicos">
       <div className="section-title">
         <span>✦ O QUE FAÇO</span>
+
         <h2>
           Meus<strong> serviços.</strong>
         </h2>
+
         <p>
           Soluções digitais completas unindo design, tecnologia de ponta e criatividade.
         </p>
@@ -326,7 +187,9 @@ function ServicesSection() {
             </div>
 
             <h3>{service.title}</h3>
+
             <p>{service.desc}</p>
+
             <span>{service.tech}</span>
           </div>
         ))}
@@ -334,6 +197,10 @@ function ServicesSection() {
     </section>
   );
 }
+
+// ======================================================
+// CONTATO
+// ======================================================
 
 function ContactSection() {
   return (
@@ -354,6 +221,8 @@ function ContactSection() {
         </p>
 
         <div className="contact-links">
+
+          {/* E-MAIL */}
           <a
             href="mailto:kamila.carvalho@email.com"
             className="contact-link"
@@ -366,33 +235,65 @@ function ContactSection() {
             </div>
           </a>
 
+          {/* LINKEDIN */}
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/kamila-carvalho-a735b0316/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-link"
           >
-            <div className="contact-icon instagram-icon">
-              in
-            </div>
+            <div className="contact-icon">in</div>
 
             <div>
               <strong>LinkedIn</strong>
               <span>Conecte-se comigo</span>
             </div>
           </a>
+
+          {/* INSTAGRAM */}
+          <a
+            href="https://www.instagram.com/kamila_carvalhho/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            <div className="contact-icon">📸</div>
+
+            <div>
+              <strong>Instagram</strong>
+              <span>@kamila_carvalhho</span>
+            </div>
+          </a>
+
+          {/* WHATSAPP */}
+          <a
+            href="https://wa.me/5562995348643"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            <div className="contact-icon">💬</div>
+
+            <div>
+              <strong>WhatsApp</strong>
+              <span>(62) 99534-8643</span>
+            </div>
+          </a>
+
         </div>
 
         <div className="contact-buttons">
           <a
-            href="mailto:kamila.carvalho@email.com"
+            href="https://wa.me/5562995348643"
+            target="_blank"
+            rel="noopener noreferrer"
             className="primary-button"
           >
-            Entrar em contato →
+            Falar pelo WhatsApp →
           </a>
 
           <a
-            href="https://github.com/"
+            href="https://github.com/KamilaaCarvalhoo"
             target="_blank"
             rel="noopener noreferrer"
             className="secondary-button"
@@ -404,6 +305,10 @@ function ContactSection() {
     </section>
   );
 }
+
+// ======================================================
+// PÁGINA PRINCIPAL
+// ======================================================
 
 function Portfolio() {
   return (
